@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>finalsurge</title>
-  </head>
-  <body>
-    <div id="app">
-      {{ message }}
+
+<head>
+  <meta charset="utf-8">
+  <title>finalsurge</title>
+</head>
+
+<body>
+
+  <div class="line-l">
+    <div class="line-l-t oh"><div class="line"></div></div>
+    <div class="line-l-b oh"><div class="line"></div></div>
+  </div>
+  <div class="line-t">
+    <div class="line-t-l oh"><div class="line"></div></div>
+    <div class="line-t-r oh"><div class="line"></div></div>
+  </div>
+
+  <div class="ds-parent">
+    <div class="ds-container">
+      <div class="page">
+        <div id="home" class="container">
+          {{ message }}
+        </div><!-- /#home -->
+      </div><!-- /.page -->
+
+      <div class="page">
+        <div class="container">Section 2</div>
+      </div><!-- /.page -->
+
+      <div class="page">
+        <div class="container">Section 3</div>
+      </div><!-- /.page -->
+
+      <div class="page">
+        <div class="container">Section 4</div>
+      </div><!-- /.page -->
     </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="/dist/build.js"></script>
-  </body>
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="/dist/build.js"></script>
+</body>
+
 </html>

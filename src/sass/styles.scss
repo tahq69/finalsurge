@@ -1,0 +1,21 @@
+
+@import '~reset-css/reset.css';
+@import '~do-slide/dist/do-slide.min.css';
+
+@import './outlines.scss';
+
+.oh {
+  overflow: hidden;
+}
+
+.page {
+
+  > .container {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    top: 20px;
+  }
+
+}
