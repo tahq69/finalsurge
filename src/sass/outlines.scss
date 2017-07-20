@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #aaa;
+  background: $outline-color;
   opacity: .3;
 }
 
@@ -16,15 +16,15 @@
 }
 
 div[class^='line-'], div[class*=' line-']{
-  transition: all 2s;
+  transition: $outline-transition;
 }
 
 .line-l {
   position: fixed;
   width: 1px;
-  left: 20px;
-  top: 20px;
-  bottom: 20px;
+  left: $outline-padding;
+  top: $outline-padding;
+  bottom: $outline-padding;
 
   .line-l-t {
     @extend .line-inner;
@@ -42,9 +42,9 @@ div[class^='line-'], div[class*=' line-']{
 
 .line-t {
   position: fixed;
-  left: 20px;
-  top: 20px;
-  right: 20px;
+  left: $outline-padding;
+  top: $outline-padding;
+  right: $outline-padding;
   height: 1px;
 
   .line-t-l {
@@ -57,6 +57,48 @@ div[class^='line-'], div[class*=' line-']{
     @extend .line-inner;
     width: calc(100% - 250px);
     top: 0;
+    right: 0;
+  }
+}
+
+.line-r {
+  position: fixed;
+  width: 1px;
+  right: $outline-padding;
+  top: $outline-padding;
+  bottom: $outline-padding;
+
+  .line-r-t {
+    @extend .line-inner;
+    height: 50%;
+    right: 0;
+  }
+
+  .line-l-b {
+    @extend .line-inner;
+    height: 50%;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.line-b {
+  position: fixed;
+  left: $outline-padding;
+  bottom: $outline-padding;
+  right: $outline-padding;
+  height: 1px;
+
+  .line-t-l {
+    @extend .line-inner;
+    width: 50%;
+    bottom: 0;
+  }
+
+  .line-t-r {
+    @extend .line-inner;
+    width: 50%;
+    bottom: 0;
     right: 0;
   }
 }

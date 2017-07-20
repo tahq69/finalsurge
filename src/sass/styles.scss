@@ -2,7 +2,9 @@
 @import '~reset-css/reset.css';
 @import '~do-slide/dist/do-slide.min.css';
 
+@import './variables.scss';
 @import './outlines.scss';
+@import './pager.scss';
 
 .oh {
   overflow: hidden;
@@ -12,10 +14,12 @@
 
   > .container {
     position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    top: 20px;
+    left: $outline-padding;
+    right: $outline-padding;
+    bottom: $outline-padding;
+    top: $outline-padding;
+
+    text-align: center;
   }
 
 }

@@ -1,0 +1,30 @@
+#pager {
+  position: fixed;
+  top: calc(50% - 20px);
+  height: 40px;
+  width: ($outline-padding * 2);
+
+  .number {
+    position: absolute;
+  }
+
+  .curr {
+    @extend .number;
+    left: calc(50% - 11px);
+  }
+
+  .total {
+    @extend .number;
+    right: calc(50% - 11px);
+    bottom: 0;
+  }
+
+  .line-pager {
+    height: 2px;
+    width: 30px;
+    margin-left: $outline-padding - 15px;
+    transform: rotate(-45deg);
+    top: 50%;
+    position: relative;
+  }
+}
