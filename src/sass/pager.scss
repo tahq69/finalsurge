@@ -3,6 +3,7 @@
   top: calc(50% - 20px);
   height: 40px;
   width: ($outline-padding * 2);
+  transition: $pager-transition;
 
   .number {
     position: absolute;
@@ -11,6 +12,12 @@
   .curr {
     @extend .number;
     left: calc(50% - 11px);
+    transition: $pager-transition;
+
+    &.l {
+      left: 0;
+      opacity: 0;
+    }
   }
 
   .total {
@@ -20,7 +27,7 @@
   }
 
   .line-pager {
-    height: 2px;
+    height: 1px;
     width: 30px;
     margin-left: $outline-padding - 15px;
     transform: rotate(-45deg);

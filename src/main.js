@@ -10,10 +10,8 @@ window.app = { home: new Vue(home) }
 
 var slider = new DoSlide('.ds-container')
 
-pager.setPage(1)
-
 slider.onBeforeChange((curIndex, tarIndex, cur, tar) => {
-  pager.leavePage()
+  pager.leavePage(curIndex + 1, tarIndex + 1)
   switch(curIndex) {
     case 0:
       return home.beforeLeave(curIndex, cur)
@@ -21,7 +19,7 @@ slider.onBeforeChange((curIndex, tarIndex, cur, tar) => {
 })
 
 slider.onChanged((curIndex, lastIndex, cur, last) => {
-  pager.setPage(curIndex + 1)
+  pager.setPage(curIndex + 1, lastIndex + 1)
   switch(curIndex) {
     case 0:
       return home.onEnter(curIndex, cur)

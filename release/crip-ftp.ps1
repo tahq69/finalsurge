@@ -1,6 +1,12 @@
 ﻿#we specify the directory where all files that we want to upload  
 $scriptPath = $PSScriptRoot;
 $Dir = (get-item $scriptPath ).parent.FullName;
+
+#build
+Set-Location -Path $Dir
+Invoke-Expression "npm run build" 
+Set-Location -Path $scriptPath
+
 #ftp server
 $ftp = "ftp://ftp.crip.lv/finalsurge/"
 $user = "u386704066"

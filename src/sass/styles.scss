@@ -10,7 +10,17 @@
   overflow: hidden;
 }
 
-.page {
+.wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.section {
 
   > .container {
     position: absolute;
