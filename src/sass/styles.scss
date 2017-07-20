@@ -2,6 +2,7 @@
 @import '~reset-css/reset.css';
 @import '~do-slide/dist/do-slide.min.css';
 
+@import './icomoon.scss';
 @import './variables.scss';
 @import './outlines.scss';
 @import './pager.scss';
@@ -11,9 +12,11 @@
 }
 
 .wrap {
+    z-index: -1;
     position: absolute;
     width: 100%;
     height: 100%;
+    background-color: $bg-color; 
 }
 
 .transparent {
@@ -23,6 +26,7 @@
 .section {
 
   > .container {
+    z-index: 2;
     position: absolute;
     left: $outline-padding;
     right: $outline-padding;

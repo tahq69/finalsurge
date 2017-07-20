@@ -56,13 +56,13 @@ div[class^='line-'], div[class*=' line-']{
 
   .line-t-l {
     @extend .line-inner;
-    width: 50px;
+    width: calc(50% - 20px);
     top: 0;
   }
 
   .line-t-r {
     @extend .line-inner;
-    width: calc(100% - 250px);
+    width: calc(50% - 20px);
     top: 0;
     right: 0;
   }
@@ -107,5 +107,34 @@ div[class^='line-'], div[class*=' line-']{
     width: 50%;
     bottom: 0;
     right: 0;
+  }
+}
+
+#logo {
+  position: fixed;
+  top: $outline-padding / 2;
+  left: $outline-padding * 1.5;
+  padding: 0 $outline-padding / 2;
+  background-color: $bg-color;
+}
+
+#social-share {
+  background-color: $bg-color;
+  position: fixed;
+  right: $outline-padding - 18px;
+  bottom: $outline-padding + 18px;
+  width: 36px;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px;
+  }
+
+  .share {
+    display: block;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    margin: 36px 0px;
   }
 }

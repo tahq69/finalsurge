@@ -5,7 +5,6 @@ class Pager {
     this.element = this.pager.childNodes[1]
 
     const leftLine = document.getElementById('line-l')
-    console.log(leftLine, leftLine.childNodes)
     this.leftLineTop = leftLine.getElementsByClassName('line-l-t')[0]
     this.leftLineBottom = leftLine.getElementsByClassName('line-l-b')[0]
   }
