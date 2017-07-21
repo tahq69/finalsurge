@@ -7,6 +7,11 @@
     background: $outline-color;
 }
 
+.line-base {
+    overflow: hidden;
+    position: fixed;
+}
+
 .line-inner {
     position: absolute;
     width: 100%;
@@ -19,8 +24,7 @@ div[class*=' line-'] {
 }
 
 #line-l {
-    overflow: hidden;
-    position: fixed;
+    @extend .line-base;
     width: 1px;
     left: $outline-padding;
     top: $outline-padding;
@@ -47,26 +51,28 @@ div[class*=' line-'] {
 }
 
 #line-t {
-    position: fixed;
+    @extend .line-base;
     left: $outline-padding;
     top: $outline-padding;
     right: $outline-padding;
     height: 1px;
     .line-t-l {
         @extend .line-inner;
-        width: calc(50% - 20px);
+        transform: translateX(-20px);
+        width: 50%;
         top: 0;
     }
     .line-t-r {
         @extend .line-inner;
-        width: calc(50% - 20px);
+        transform: translateX(20px);
+        width: 50%;
         top: 0;
         right: 0;
     }
 }
 
 #line-r {
-    position: fixed;
+    @extend .line-base;
     width: 1px;
     right: $outline-padding;
     top: $outline-padding;
@@ -85,7 +91,7 @@ div[class*=' line-'] {
 }
 
 #line-b {
-    position: fixed;
+    @extend .line-base;
     left: $outline-padding;
     bottom: $outline-padding;
     right: $outline-padding;
