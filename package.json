@@ -9,6 +9,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.3.7",
     "do-slide": "^1.1.4",
     "fullpage.js": "^2.9.4",
     "reset-css": "^2.2.0",

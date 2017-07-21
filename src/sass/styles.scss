@@ -1,5 +1,9 @@
-@import '~reset-css/reset.css';
 @import '~do-slide/dist/do-slide.min.css';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_responsive-utilities.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss';
 @import './icomoon.scss';
 @import './variables.scss';
 @import '../components/outlines/styles.scss';
@@ -21,13 +25,18 @@
 }
 
 .section {
-    >.container {
+    .ds-section {
         z-index: 2;
         position: absolute;
-        left: $outline-padding;
-        right: $outline-padding;
-        bottom: $outline-padding;
-        top: $outline-padding;
         text-align: center;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        .ds-section {
+            left: $outline-padding;
+            right: $outline-padding;
+            bottom: $outline-padding;
+            top: $outline-padding;
+        }
     }
 }
