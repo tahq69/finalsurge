@@ -2,8 +2,8 @@
 @import '~do-slide/dist/do-slide.min.css';
 @import './icomoon.scss';
 @import './variables.scss';
-@import './outlines.scss';
-@import './pager.scss';
+@import '../components/outlines/styles.scss';
+@import '../components/pager/styles.scss';
 .oh {
     overflow: hidden;
 }

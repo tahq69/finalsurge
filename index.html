@@ -11,45 +11,52 @@
 
 <body>
 
-  <div id="line-t">
-    <div class="line-t-l oh">
-      <div class="line"></div>
+  <div id="outlines">
+
+    <div id="line-t">
+      <div class="line-t-l oh">
+        <div class="line"></div>
+      </div>
+      <div class="line-t-r oh">
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="line-t-r oh">
-      <div class="line"></div>
+
+    <div id="line-r">
+      <div class="line-r-t oh">
+        <div class="line"></div>
+      </div>
+      <div class="line-r-b oh">
+        <div class="line"></div>
+      </div>
     </div>
-  </div>
-  <div id="line-r">
-    <div class="line-r-t oh">
-      <div class="line"></div>
+
+    <div id="line-b">
+      <div class="line-b-l oh">
+        <div class="line"></div>
+      </div>
+      <div class="line-b-r oh">
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="line-r-b oh">
-      <div class="line"></div>
-    </div>
-  </div>
-  <div id="line-b">
-    <div class="line-b-l oh">
-      <div class="line"></div>
-    </div>
-    <div class="line-b-r oh">
-      <div class="line"></div>
-    </div>
-  </div>
-  <div id="line-l">
-    <div class="line-l-t f oh">
-      <div class="line"></div>
-    </div>
-    <div class="line-l-b f oh">
-      <div class="line"></div>
+
+    <div id="line-l">
+      <div class="line-l-t oh" :class="leftClass">
+        <div class="line"></div>
+      </div>
+      <div class="line-l-b oh" :class="leftClass">
+        <div class="line"></div>
+      </div>
     </div>
   </div>
 
-  <div id="pager" class="oh transparent">
-    <div class="curr l">1</div>
-    <div class="line-pager oh">
-      <div class="line"></div>
+  <div id="pager" class="oh" :class="{transparent: isInvisible}">
+      <div class="curr" :class="{l: isPageAway}">{{page}}</div>
+      <div class="line-pager oh">
+        <div class="line"></div>
+      </div>
+      <div class="total">5</div>
     </div>
-    <div class="total">4</div>
   </div>
 
   <div id="logo">
@@ -85,6 +92,11 @@
 
       <div class="section">
         <div class="container">Section 4</div>
+      </div>
+      <!-- /.section -->
+
+      <div class="section">
+        <div class="container">Section 5</div>
       </div>
       <!-- /.section -->
     </div>

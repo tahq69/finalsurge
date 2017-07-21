@@ -1,7 +1,9 @@
 var path = require('path')
 var webpack = require('webpack')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
+  context: path.join(__dirname),
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -44,7 +46,12 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: 'src/assets/logo', to: './' },
+    ])
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
