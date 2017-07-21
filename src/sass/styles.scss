@@ -4,10 +4,12 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_responsive-utilities.scss';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss';
-@import './icomoon.scss';
 @import './variables.scss';
+@import './icomoon.scss';
 @import '../components/outlines/styles.scss';
 @import '../components/pager/styles.scss';
+@import '../components/scroll/styles.scss';
+
 .oh {
     overflow: hidden;
 }
@@ -28,7 +30,6 @@
     .ds-section {
         z-index: 2;
         position: absolute;
-        text-align: center;
     }
 
     @media (min-width: $screen-sm-min) {

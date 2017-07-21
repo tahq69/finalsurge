@@ -2,24 +2,25 @@ export default new Vue({
   el: '#outlines',
   data() {
     return {
-      isLeftSolid: true
+      isLeftSolid: true,
+      isTopSolid: true,
+      isBottomSolid: false
     }
   },
-  computed: {
-    leftClass() {
-      if (this.isLeftSolid)
-        return ['f']
-      return []
-    },
-  },
   methods: {
-    expandLeft() {
-      this.isLeftSolid = false
-      return true
+    expand(...sides) {
+      this.setAll(sides, false)
     },
-    solidLeft() {
-      this.isLeftSolid = true
-      return true
+    solid(...sides) {
+      this.setAll(sides, true)
+    },
+    setAll(sides, value) {
+      for (let side of sides) {
+        this[`is${this.capitalize(side)}Solid`] = value
+      }
+    },
+    capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
     }
   }
 })

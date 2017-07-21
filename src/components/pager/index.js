@@ -1,5 +1,5 @@
 
-export default function (outlines) {
+export default function (outlines, scroll) {
   return new Vue({
     el: '#pager',
     data() {
@@ -11,14 +11,16 @@ export default function (outlines) {
     },
     methods: {
       setPage(page, fromPage) {
-        if (page === 1)
+        if (page === 1){
           // make left line solid when entered page 1
-          outlines.solidLeft()
+          outlines.solid('left', 'top')
+          outlines.expand('bottom')
+          scroll.show()
+        }
         else
           this.isPageAway = false
 
         if (fromPage === 1)
-          // show pager if leave page 1
           this.isInvisible = false
 
         this.page = page
@@ -26,8 +28,9 @@ export default function (outlines) {
 
       leavePage(page, targetPage) {
         if (page === 1) {
-          // expand lines before leave page 1
-          outlines.expandLeft()
+          outlines.expand('left', 'top')
+          outlines.solid('bottom')
+          scroll.hide()
         }
 
         if (targetPage === 1) {

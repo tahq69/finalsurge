@@ -23,51 +23,34 @@ div[class*=' line-'] {
     transition: $outline-transition;
 }
 
-#line-l {
-    @extend .line-base;
-    width: 1px;
-    left: $outline-padding;
-    top: $outline-padding;
-    bottom: $outline-padding;
-    .line-l-t {
-        @extend .line-inner;
-        transform: translateY(-50px);
-        height: 50%;
-        left: 0;
-        &.f {
-            transform: translateY(0px);
-        }
-    }
-    .line-l-b {
-        @extend .line-inner;
-        transform: translateY(50px);
-        height: 50%;
-        left: 0;
-        bottom: 0;
-        &.f {
-            transform: translateY(0px);
-        }
-    }
-}
-
 #line-t {
     @extend .line-base;
     left: $outline-padding;
     top: $outline-padding;
     right: $outline-padding;
     height: 1px;
+
     .line-t-l {
         @extend .line-inner;
-        transform: translateX(-20px);
+        transform: translateX(-50px);
         width: 50%;
         top: 0;
+
+        &.f {
+            transform: translateX(0px);
+        }
     }
+
     .line-t-r {
         @extend .line-inner;
-        transform: translateX(20px);
+        transform: translateX(50px);
         width: 50%;
         top: 0;
         right: 0;
+        
+        &.f {
+            transform: translateX(0px);
+        }
     }
 }
 
@@ -77,11 +60,13 @@ div[class*=' line-'] {
     right: $outline-padding;
     top: $outline-padding;
     bottom: $outline-padding;
+
     .line-r-t {
         @extend .line-inner;
         height: 50%;
         right: 0;
     }
+
     .line-l-b {
         @extend .line-inner;
         height: 50%;
@@ -96,16 +81,57 @@ div[class*=' line-'] {
     bottom: $outline-padding;
     right: $outline-padding;
     height: 1px;
-    .line-t-l {
+
+    .line-b-l {
         @extend .line-inner;
+        transform: translateX(-50px);
         width: 50%;
         bottom: 0;
+
+        &.f {
+            transform: translateX(0px);
+        }
     }
-    .line-t-r {
+    .line-b-r {
         @extend .line-inner;
+        transform: translateX(50px);
         width: 50%;
         bottom: 0;
         right: 0;
+
+        &.f {
+            transform: translateX(0px);
+        }
+    }
+}
+
+#line-l {
+    @extend .line-base;
+    width: 1px;
+    left: $outline-padding;
+    top: $outline-padding;
+    bottom: $outline-padding;
+
+    .line-l-t {
+        @extend .line-inner;
+        transform: translateY(-50px);
+        height: 50%;
+        left: 0;
+
+        &.f {
+            transform: translateY(0px);
+        }
+    }
+    .line-l-b {
+        @extend .line-inner;
+        transform: translateY(50px);
+        height: 50%;
+        left: 0;
+        bottom: 0;
+
+        &.f {
+            transform: translateY(0px);
+        }
     }
 }
 
@@ -123,19 +149,19 @@ div[class*=' line-'] {
     right: $outline-padding - 18px;
     bottom: $outline-padding + 18px;
     width: 36px;
+
     a {
         display: inline-block;
         text-decoration: none;
         padding: 8px;
     }
     .share {
-        -moz-transition: all 0s;
-        -webkit-transition: all 0s;
-        -o-transition: all 0s;
-        transition: all 0s;
         display: block;
-        transform: rotate(-90deg);
+        transform: rotate(270deg);
         text-transform: uppercase;
         margin: 36px 0px;
+        color: #C6D6E0;
+        font-size: 14px;
+        line-height: 16px;
     }
 }

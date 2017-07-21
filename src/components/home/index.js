@@ -4,7 +4,8 @@ export default new Vue({
   el: '#home',
 
   data: {
-    message: 'Hello Vue!'
+    message: 'Hello Vue!',
+    isScrollInPlace: false,
   },
 
   methods: {

@@ -1,0 +1,12 @@
+#scroll-wrap {
+    transition: $pager-transition;
+    position: fixed;
+    left: calc(50% - 15px);
+    bottom: 0;
+    opacity: 0;
+
+    &.p {
+        opacity: 1;
+        bottom: $outline-padding - 23px;
+    }
+}

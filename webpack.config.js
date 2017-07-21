@@ -50,6 +50,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([
       { from: 'src/assets/logo', to: './' },
+      { from: 'src/assets', to: './' },
     ])
   ]
 }
