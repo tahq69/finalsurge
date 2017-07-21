@@ -1,140 +1,135 @@
-
 .line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: $outline-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $outline-color;
 }
 
 .line-inner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-div[class^='line-'], div[class*=' line-']{
-  transition: $outline-transition;
+div[class^='line-'],
+div[class*=' line-'] {
+    transition: $outline-transition;
 }
 
 #line-l {
-  position: fixed;
-  width: 1px;
-  left: $outline-padding;
-  top: $outline-padding;
-  bottom: $outline-padding;
-
-  .line-l-t {
-    @extend .line-inner;
-    height: calc(50% - 24px);
-    left: 0;
-
-    &.f {
-      height: 50%;
+    overflow: hidden;
+    position: fixed;
+    width: 1px;
+    left: $outline-padding;
+    top: $outline-padding;
+    bottom: $outline-padding;
+    .line-l-t {
+        @extend .line-inner;
+        transform: translateY(-24px);
+        height: 50%;
+        left: 0;
+        &.f {
+            transform: translateY(0px);
+        }
     }
-  }
-
-  .line-l-b {
-    @extend .line-inner;
-    height: calc(50% - 24px);
-    left: 0;
-    bottom: 0;
-
-    &.f {
-      height: 50%;
+    .line-l-b {
+        @extend .line-inner;
+        transform: translateY(24px);
+        height: 50%;
+        left: 0;
+        bottom: 0;
+        &.f {
+            transform: translateY(0px);
+        }
     }
-  }
 }
 
 #line-t {
-  position: fixed;
-  left: $outline-padding;
-  top: $outline-padding;
-  right: $outline-padding;
-  height: 1px;
-
-  .line-t-l {
-    @extend .line-inner;
-    width: calc(50% - 20px);
-    top: 0;
-  }
-
-  .line-t-r {
-    @extend .line-inner;
-    width: calc(50% - 20px);
-    top: 0;
-    right: 0;
-  }
+    position: fixed;
+    left: $outline-padding;
+    top: $outline-padding;
+    right: $outline-padding;
+    height: 1px;
+    .line-t-l {
+        @extend .line-inner;
+        width: calc(50% - 20px);
+        top: 0;
+    }
+    .line-t-r {
+        @extend .line-inner;
+        width: calc(50% - 20px);
+        top: 0;
+        right: 0;
+    }
 }
 
 #line-r {
-  position: fixed;
-  width: 1px;
-  right: $outline-padding;
-  top: $outline-padding;
-  bottom: $outline-padding;
-
-  .line-r-t {
-    @extend .line-inner;
-    height: 50%;
-    right: 0;
-  }
-
-  .line-l-b {
-    @extend .line-inner;
-    height: 50%;
-    right: 0;
-    bottom: 0;
-  }
+    position: fixed;
+    width: 1px;
+    right: $outline-padding;
+    top: $outline-padding;
+    bottom: $outline-padding;
+    .line-r-t {
+        @extend .line-inner;
+        height: 50%;
+        right: 0;
+    }
+    .line-l-b {
+        @extend .line-inner;
+        height: 50%;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 #line-b {
-  position: fixed;
-  left: $outline-padding;
-  bottom: $outline-padding;
-  right: $outline-padding;
-  height: 1px;
-
-  .line-t-l {
-    @extend .line-inner;
-    width: 50%;
-    bottom: 0;
-  }
-
-  .line-t-r {
-    @extend .line-inner;
-    width: 50%;
-    bottom: 0;
-    right: 0;
-  }
+    position: fixed;
+    left: $outline-padding;
+    bottom: $outline-padding;
+    right: $outline-padding;
+    height: 1px;
+    .line-t-l {
+        @extend .line-inner;
+        width: 50%;
+        bottom: 0;
+    }
+    .line-t-r {
+        @extend .line-inner;
+        width: 50%;
+        bottom: 0;
+        right: 0;
+    }
 }
 
 #logo {
-  position: fixed;
-  top: $outline-padding / 2;
-  left: $outline-padding * 1.5;
-  padding: 0 $outline-padding / 2;
-  background-color: $bg-color;
+    position: fixed;
+    top: $outline-padding / 2;
+    left: $outline-padding * 1.5;
+    padding: 0 $outline-padding / 2;
+    background-color: $bg-color;
 }
 
 #social-share {
-  background-color: $bg-color;
-  position: fixed;
-  right: $outline-padding - 18px;
-  bottom: $outline-padding + 18px;
-  width: 36px;
-
-  a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 8px;
-  }
-
-  .share {
-    display: block;
-    transform: rotate(-90deg);
-    text-transform: uppercase;
-    margin: 36px 0px;
-  }
+    background-color: $bg-color;
+    position: fixed;
+    right: $outline-padding - 18px;
+    bottom: $outline-padding + 18px;
+    width: 36px;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 8px;
+    }
+    .share {
+        -moz-transition: all 0s;
+        -webkit-transition: all 0s;
+        -o-transition: all 0s;
+        transition: all 0s;
+        display: block;
+        transform: rotate(-90deg);
+        text-transform: uppercase;
+        margin: 36px 0px;
+    }
 }
