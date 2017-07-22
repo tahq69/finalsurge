@@ -3,6 +3,7 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_responsive-utilities.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_responsive-embed.scss';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss';
 
 @import './variables.scss';
@@ -18,3 +19,4 @@
 
 @import '../components/home/styles.scss';
 @import '../components/video/styles.scss';
+@import '../components/achievement/styles.scss';

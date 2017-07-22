@@ -11,7 +11,7 @@ export default function (outlines, scroll, corner, logo, share) {
     },
     methods: {
       setPage(page, fromPage) {
-        if (page === 1){
+        if (page === 1) {
           // make left line solid when entered page 1
           outlines.solid('left', 'top')
           outlines.expand('bottom')
@@ -21,6 +21,18 @@ export default function (outlines, scroll, corner, logo, share) {
         } else {
           corner.hideHome()
           this.isPageAway = false
+        }
+
+        if (page === 5) {
+          corner.white()
+        }
+
+        if (page === 4 || page === 3) {
+          corner.black()
+        }
+
+        if (page === 2) {
+          corner.red()
         }
 
         if (fromPage === 1)

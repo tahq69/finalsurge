@@ -1,6 +1,10 @@
 #pager {
     transition: $pager-transition;
 
+    &.transparent .top {
+        opacity: 0;
+    }
+
     .top {
         position: fixed;
         left: calc(50% - 83px);
@@ -27,19 +31,23 @@
 
     .side {
         position: fixed;
-        top: calc(50% - 20px);
-        height: 40px;
+        top: calc(50% - 31px);
+        height: 62px;
         width: ($outline-padding * 2);
         transition: $pager-transition;
 
         .number {
             position: absolute;
+            font-size: 25.5px;
+            font-weight: 300;
         }
 
         .curr {
             @extend .number;
-            margin-left: $outline-padding - 11px;
+            margin-left: $outline-padding - 15px;
             transition: $pager-transition;
+            color: #E84B3C;
+
             &.l {
                 margin-left: 0px;
                 opacity: 0;
@@ -48,15 +56,16 @@
 
         .total {
             @extend .number;
-            right: calc(50% - 11px);
+            right: calc(50% - 15px);
             bottom: 0px;
+            color: #595975;
         }
 
         .line-pager {
             height: 1px;
-            width: 30px;
-            margin-left: $outline-padding - 15px;
-            transform: rotate(-45deg);
+            width: 37px;
+            margin-left: $outline-padding - 18px;
+            transform: rotate(-60deg);
             top: 50%;
             position: relative;
         }

@@ -133,7 +133,8 @@
 
         .right-side {
             position: absolute;
-            left: calc(75% - 167px);
+            left: 75%;
+            transform: translateX(-167px);
             top: calc(50% - 334px);
             bottom: calc(50% - 334px);
             margin: 0;

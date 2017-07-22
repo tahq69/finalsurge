@@ -1,4 +1,3 @@
-
 .oh {
     overflow: hidden;
 }
@@ -13,6 +12,14 @@
 
 .transparent {
     opacity: 0;
+
+    .top {
+        opacity: 0;
+    }
+
+    .side {
+        opacity: 0;
+    }
 }
 
 .section {

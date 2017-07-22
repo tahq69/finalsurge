@@ -131,11 +131,8 @@
             </div>
             <div class="bottom-part" :class="{h: isExiting}">
               <span class="app-store"> 
-                <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
-              </span>
-              <span class="android hidden-xs">
-                <span class="icon-android-badge"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
-              </span>
+                <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></span>
+                <span class="android hidden-xs"><span class="icon-android-badge"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></span>
             </div>
           </div>
           <div class="right-side" :class="{h: isExiting}">
@@ -156,6 +153,17 @@
       <div class="section" id="video">
         <div class="ds-section">
           <h2 class="page-title">Train on the go <i class="underline"></i></h2>
+          <div class="video-wrap">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+            </div>
+          </div>
+          <div class="video-share">
+            <p class="share-title">Share the video</p>
+            <a href="#" class="share-btn"><i class="icon-Twitter"></i></a>
+            <a href="#" class="share-btn"><i class="icon-Facebook"></i></a>
+            <a href="#" class="share-btn"><i class="icon-Linkedin"></i></a>
+          </div>
         </div>
         <div class="bg" :class="{l: isExiting}"></div>
       </div>
@@ -176,7 +184,7 @@
       <!-- /.section -->
 
       <div class="section">
-        <div class="ds-section">
+        <div class="ds-section" id="achievement">
           <h2 class="page-title">Achivement <i class="underline"></i></h2>
         </div>
       </div>
