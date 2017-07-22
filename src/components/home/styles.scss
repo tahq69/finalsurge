@@ -108,7 +108,7 @@
 
             .top-part {
                 position: relative;
-                transition: all ease 1.5s;
+                transition: $transition;
                 opacity: 1;
                 top: 0;
 
@@ -120,7 +120,7 @@
 
             .bottom-part {
                 position: relative;
-                transition: all ease 1.5s;
+                transition: $transition;
                 left: 0;
                 bottom: 0;
 
@@ -137,7 +137,7 @@
             top: calc(50% - 334px);
             bottom: calc(50% - 334px);
             margin: 0;
-            transition: all ease 1s;
+            transition: $transition;
 
             &.h {
                 left: 100%;

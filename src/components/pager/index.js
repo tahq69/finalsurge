@@ -1,5 +1,5 @@
 
-export default function (outlines, scroll, corner) {
+export default function (outlines, scroll, corner, logo, share) {
   return new Vue({
     el: '#pager',
     data() {
@@ -16,9 +16,9 @@ export default function (outlines, scroll, corner) {
           outlines.solid('left', 'top')
           outlines.expand('bottom')
           scroll.show()
+          share.show()
           corner.showHome()
-        }
-        else{
+        } else {
           corner.hideHome()
           this.isPageAway = false
         }
@@ -34,9 +34,12 @@ export default function (outlines, scroll, corner) {
           outlines.expand('left', 'top')
           outlines.solid('bottom')
           scroll.hide()
+          share.hide()
+          logo.minimize()
         }
 
         if (targetPage === 1) {
+          logo.maximize()
           // hide pager before go to page 1
           this.isInvisible = true
         }

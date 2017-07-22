@@ -1,0 +1,37 @@
+
+#page-logo {
+    position: fixed;
+    top: 27px;
+    left: calc(50% - 38px);
+}
+
+@media (max-width: $screen-xs-max) { 
+    #page-logo {
+        transition: $transition;
+
+        img { 
+            transition: $transition;
+            width: 75px;
+            height: 75px;
+        }
+
+        &.m {
+            left: 29px;
+            top: 26px;
+            
+            img {
+                width: 38px;
+                height: 38px;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    #page-logo {
+        top: $outline-padding / 2;
+        left: $outline-padding * 3;
+        padding: 0 $outline-padding / 2;
+        background-color: $bg-color;
+    }
+}

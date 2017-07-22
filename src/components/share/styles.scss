@@ -1,5 +1,6 @@
 
 #social-share {
+    transition: $transition;
     background-color: $bg-color;
     position: fixed;
     right: $outline-padding - 18px;
@@ -20,5 +21,9 @@
         color: #C6D6E0;
         font-size: 14px;
         line-height: 16px;
+    }
+
+    &.h {
+        opacity: 0;
     }
 }

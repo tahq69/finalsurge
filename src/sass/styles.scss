@@ -4,47 +4,17 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_responsive-utilities.scss';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss';
+
 @import './variables.scss';
 @import './icomoon.scss';
+@import './shared.scss';
+
 @import '../components/outlines/styles.scss';
 @import '../components/pager/styles.scss';
 @import '../components/scroll/styles.scss';
 @import '../components/share/styles.scss';
 @import '../components/cornerTopRight/styles.scss';
+@import '../components/logo/styles.scss';
 
 @import '../components/home/styles.scss';
-
-.oh {
-    overflow: hidden;
-}
-
-.wrap {
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: $bg-color;
-}
-
-.transparent {
-    opacity: 0;
-}
-
-.section {
-    .ds-section {
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-    }
-
-    @media (min-width: $screen-sm-min) {
-        .ds-section {
-            overflow: hidden;
-            left: $outline-padding;
-            right: $outline-padding;
-            bottom: $outline-padding;
-            top: $outline-padding;
-        }
-    }
-}
+@import '../components/video/styles.scss';

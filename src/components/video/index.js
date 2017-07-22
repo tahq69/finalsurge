@@ -1,17 +1,9 @@
 export default new Vue({
-  name: 'home',
-
-  el: '#home',
-
-  mounted() {
-    setTimeout(() => {
-      this.isExiting = false;
-    }, 100);
-  },
+  name: 'video',
+  el: '#video',
 
   data: {
     isExiting: true,
-    isScrollInPlace: false,
   },
 
   methods: {

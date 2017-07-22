@@ -1,5 +1,6 @@
 import DoSlide from 'do-slide'
 import home from '../home'
+import video from '../video'
 
 export default function (pager, outlines) {
   var slider = new DoSlide('.ds-container')
@@ -9,6 +10,8 @@ export default function (pager, outlines) {
     switch (curIndex) {
       case 0:
         return home.beforeLeave(curIndex, cur)
+      case 1:
+        return video.beforeLeave(curIndex, cur)
     }
   })
 
@@ -17,6 +20,8 @@ export default function (pager, outlines) {
     switch (curIndex) {
       case 0:
         return home.onEnter(curIndex, cur)
+      case 1:
+        return video.onEnter(curIndex, cur)
     }
   })
 }

@@ -1,8 +1,7 @@
 #corner-t-r {
     right: 26px;
     top: 22px;
-    transition: all ease .75s;
-    padding: 0 0 30px 30px;
+    transition: $fast-transition;
     position: fixed;
     opacity: 1;
 
@@ -10,7 +9,7 @@
         right: 0;
         top: 0;
         padding: 0;
-            opacity: 0;
+        opacity: 0;
     }
 
     a {
@@ -26,6 +25,29 @@
         &.home {
             font-size: 27px;
         }
+
+        &.download {
+            display: inline-block;
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: 500;
+            text-align: center;
+            padding: 9px 15px;
+            height: auto;
+            border-radius: 60px;
+            background-color: #E84B3C;
+            right: 28px;
+            top: 33px;
+
+            &.h {
+                width: 0;
+                padding: 0;
+            }
+
+            &.b {
+                background-color: #2B2E3D;
+            }
+        }
     }
 }
 
@@ -33,6 +55,5 @@
     #corner-t-r {
         right: $outline-padding - 13px;
         top: $outline-padding - 13px;
-        background-color: $bg-color;
     }
 }
