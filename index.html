@@ -7,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>finalsurge</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <style>
     html,
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Roboto', sans-serif;
     }
 
     #loading {
@@ -88,8 +90,13 @@
   </div>
   </div>
 
-  <div id="logo" class="hidden-xs">
+  <div id="page-logo">
     <img src="/dist/logo@1x.png" alt="Finalsurge">
+  </div>
+
+  <div id="corner-t-r" :class="{h: isHidden}">
+    <a href="#" class="corner-btn home" :class="{h: !isHomeVisible}"><i class="icon-home"></i></a>
+    <a href="#" class="corner-btn download" :class="{h: isHomeVisible, b: isBlack, w: isWhite}">DOWNLOAD iOS</a>
   </div>
 
   <div id="social-share" class="hidden-xs">
@@ -98,7 +105,7 @@
     <a href="#" class="share-btn"><i class="icon-Linkedin"></i></a>
     <span class="share">Share</span>
   </div>
-  
+
   <div id="scroll-wrap" class="hidden-xs" :class="{p: isScrollInPlace}">
     <img src="/dist/scroll.gif" />
   </div>
@@ -107,7 +114,36 @@
     <div class="ds-container">
       <div class="section">
         <div id="home" class="ds-section">
-          {{ message }}
+
+          <div class="radial-gradient visible-xs"></div>
+
+          <div class="left-side">
+            <div class="top-part" :class="{h: isExiting}">
+              <h3 class="subtitle">Final Surge Mobile App</h3>
+              <h1 class="title">Training and coaching platform</h1>
+              <p class="description">
+                Empowering athletes and coaches to reach fitness and performance excellence like never before.
+              </p>
+            </div>
+            <div class="bottom-part" :class="{h: isExiting}">
+              <span class="app-store">
+                <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+              </span>
+              <span class="android hidden-xs">
+                <span class="icon-android-badge"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+              </span>
+            </div>
+          </div>
+          <div class="right-side" :class="{h: isExiting}">
+            <div class="phone">
+              <div class="phone-overlay"></div>
+              <div class="screen">
+                <div class="head"></div>
+                <div class="content"></div>
+                <div class="nav"></div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- /#home -->
       </div>

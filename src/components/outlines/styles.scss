@@ -135,33 +135,17 @@ div[class*=' line-'] {
     }
 }
 
-#logo {
+#page-logo {
     position: fixed;
-    top: $outline-padding / 2;
-    left: $outline-padding * 1.5;
-    padding: 0 $outline-padding / 2;
-    background-color: $bg-color;
+    top: 27px;
+    left: calc(50% - 38px);
 }
 
-#social-share {
-    background-color: $bg-color;
-    position: fixed;
-    right: $outline-padding - 18px;
-    bottom: $outline-padding + 18px;
-    width: 36px;
-
-    a {
-        display: inline-block;
-        text-decoration: none;
-        padding: 8px;
-    }
-    .share {
-        display: block;
-        transform: rotate(270deg);
-        text-transform: uppercase;
-        margin: 36px 0px;
-        color: #C6D6E0;
-        font-size: 14px;
-        line-height: 16px;
+@media (min-width: $screen-sm-min) {
+    #page-logo {
+        top: $outline-padding / 2;
+        left: $outline-padding * 3;
+        padding: 0 $outline-padding / 2;
+        background-color: $bg-color;
     }
 }

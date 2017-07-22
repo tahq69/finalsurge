@@ -9,6 +9,10 @@
 @import '../components/outlines/styles.scss';
 @import '../components/pager/styles.scss';
 @import '../components/scroll/styles.scss';
+@import '../components/share/styles.scss';
+@import '../components/cornerTopRight/styles.scss';
+
+@import '../components/home/styles.scss';
 
 .oh {
     overflow: hidden;
@@ -30,10 +34,13 @@
     .ds-section {
         z-index: 2;
         position: absolute;
+        top: 0;
+        bottom: 0;
     }
 
     @media (min-width: $screen-sm-min) {
         .ds-section {
+            overflow: hidden;
             left: $outline-padding;
             right: $outline-padding;
             bottom: $outline-padding;

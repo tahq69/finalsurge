@@ -1,0 +1,158 @@
+#home {
+    .left-side {
+        padding-top: 68px;
+
+        .bottom-part {
+            z-index: 10;
+            font-size: 60px;
+            position: absolute;
+            left: calc(50% - 101px);
+            bottom: 60px;
+        }
+    }
+
+    .right-side {
+        margin-top: 40px;
+
+        .phone {
+            position: relative;
+            margin: 0 auto;
+            opacity: .5;
+            width: 334px;
+            height: 665px;
+            background: url(../assets/phone.png) no-repeat;
+
+            .phone-overlay {
+                background: url(../assets/phone-overlay.png) no-repeat;
+                position: absolute;
+                top: 0;
+                left: 10px;
+                bottom: 0;
+                right: 0;
+            }
+
+            .screen {
+                position: absolute;
+                width: 276px;
+                height: 491px;
+                overflow: hidden;
+                top: 82px;
+                left: 33px;
+            }
+
+            .head {
+                z-index: 4;
+                background: url(../assets/phone-head.png) no-repeat;
+                position: relative;
+                height: 128px;
+            }
+
+            .content {
+                z-index: 3;
+                background: url(../assets/phone-content.png) no-repeat;
+                position: relative;
+                height: 483px;
+                top: -27px;
+            }
+
+            .nav {
+                z-index: 4;
+                background: url(../assets/phone-nav.png) no-repeat;
+                position: relative;
+                height: 36px;
+                top: -155px;
+            }
+        }
+    }
+
+    .subtitle {
+        color: #6F6F84;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        color: #595975;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 0 20px;
+        margin: 10px 0 17px 0;
+    }
+
+    .description {
+        color: #6F6F84;
+        font-size: 14px;
+        text-align: center;
+        padding: 0 60px;
+        margin-top: 17px;
+    }
+}
+
+.radial-gradient {
+    height: 64px;
+    width: 100%;
+    opacity: 0.06;
+    background: radial-gradient(circle, #373535 0%, #FFFFFF 100%);
+}
+
+@media (min-width: $screen-sm-min) {
+    #home {
+        .left-side {
+            position: absolute;
+            right: calc(50% + 15px);
+            max-width: 410px;
+            top: calc(50% - 205px);
+
+            .top-part {
+                position: relative;
+                transition: all ease 1.5s;
+                opacity: 1;
+                top: 0;
+
+                &.h {
+                    top: -200px;
+                    opacity: 0;
+                }
+            }
+
+            .bottom-part {
+                position: relative;
+                transition: all ease 1.5s;
+                left: 0;
+                bottom: 0;
+
+                &.h {
+                    bottom: -200px;
+                    opacity: 0;
+                }
+            }
+        }
+
+        .right-side {
+            position: absolute;
+            left: calc(75% - 167px);
+            top: calc(50% - 334px);
+            bottom: calc(50% - 334px);
+            margin: 0;
+            transition: all ease 1s;
+
+            &.h {
+                left: 100%;
+                opacity: 0;
+            }
+
+            .phone {
+                opacity: 1;
+                position: relative;
+            }
+        }
+
+        .subtitle, .title, .description {
+            text-align: left;
+            padding: 0;
+        }
+    }
+}

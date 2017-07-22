@@ -1,0 +1,38 @@
+#corner-t-r {
+    right: 26px;
+    top: 22px;
+    transition: all ease .75s;
+    padding: 0 0 30px 30px;
+    position: fixed;
+    opacity: 1;
+
+    &.h {
+        right: 0;
+        top: 0;
+        padding: 0;
+            opacity: 0;
+    }
+
+    a {
+        text-decoration: none;
+        opacity: 1;
+        height: 28px;
+
+        &.h {
+            opacity: 0;
+            display: none;
+        }
+
+        &.home {
+            font-size: 27px;
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    #corner-t-r {
+        right: $outline-padding - 13px;
+        top: $outline-padding - 13px;
+        background-color: $bg-color;
+    }
+}

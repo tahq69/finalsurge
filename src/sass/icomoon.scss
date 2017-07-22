@@ -24,13 +24,13 @@
 
 .icon-appstore .path1:before {
     content: "\e900";
-    color: rgb(0, 0, 0);
+    color: gray;
 }
 
 .icon-appstore .path2:before {
     content: "\e901";
     margin-left: -3.375em;
-    color: none;
+    color: rgb(0, 0, 0);
 }
 
 .icon-appstore .path3:before {

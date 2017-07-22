@@ -3,18 +3,26 @@ export default new Vue({
 
   el: '#home',
 
+  mounted() {
+    setTimeout(() => {
+      this.isExiting = false;
+    }, 100);
+  },
+
   data: {
-    message: 'Hello Vue!',
+    isExiting: true,
     isScrollInPlace: false,
   },
 
   methods: {
-    onEnter(index, element) {
-      console.log('home.onEnter', { index, element })
+    onEnter() {
+      this.isExiting = false;
     },
 
-    beforeLeave(index, element) {
-      console.log('home.beforeLeave', { index, element })
+    beforeLeave() {
+      setTimeout(() => {
+        this.isExiting = true;
+      }, 1000)
     },
   }
 })

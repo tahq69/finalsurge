@@ -1,5 +1,5 @@
 
-export default function (outlines, scroll) {
+export default function (outlines, scroll, corner) {
   return new Vue({
     el: '#pager',
     data() {
@@ -16,9 +16,12 @@ export default function (outlines, scroll) {
           outlines.solid('left', 'top')
           outlines.expand('bottom')
           scroll.show()
+          corner.showHome()
         }
-        else
+        else{
+          corner.hideHome()
           this.isPageAway = false
+        }
 
         if (fromPage === 1)
           this.isInvisible = false
@@ -38,6 +41,7 @@ export default function (outlines, scroll) {
           this.isInvisible = true
         }
 
+        corner.hide()
         this.isPageAway = true
       }
     }
