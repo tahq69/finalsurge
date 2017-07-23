@@ -20,7 +20,7 @@
     }
 
     .page-content {
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
         font-size: 14px;
         font-weight: 300;
         margin: 0 20px 32px 20px;
@@ -35,7 +35,8 @@
         .footer-link {
             text-decoration: none;
             color: #FFFFFF;
-            font-family: 'Roboto';
+            font-family: 'Roboto',sans-serif;
+            font-weight: 400;
             font-size: 10px;
             margin: 0 8px;
         }

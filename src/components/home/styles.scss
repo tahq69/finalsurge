@@ -15,7 +15,10 @@
         margin-top: 40px;
 
         .phone {
-            position: relative;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: -400px;
             margin: 0 auto;
             opacity: .5;
             width: 334px;
@@ -67,7 +70,9 @@
 
     .subtitle {
         color: #6F6F84;
+        font-family: 'Roboto', sans-serif;
         font-size: 14px;
+        font-weight: 400;
         text-align: center;
         margin-bottom: 10px;
     }
@@ -78,13 +83,15 @@
         font-weight: bold;
         letter-spacing: 1px;
         text-align: center;
-        padding: 0 20px;
+        padding: 0 50px;
         margin: 10px 0 17px 0;
     }
 
     .description {
         color: #6F6F84;
+        font-family: 'Roboto', sans-serif;
         font-size: 14px;
+        font-weight: 400;
         text-align: center;
         padding: 0 60px;
         margin-top: 17px;
@@ -103,8 +110,9 @@
         .left-side {
             position: absolute;
             right: calc(50% + 15px);
-            max-width: 410px;
+            max-width: 450px;
             top: calc(50% - 205px);
+            padding-top: 0;
 
             .top-part {
                 position: relative;
@@ -133,8 +141,8 @@
 
         .right-side {
             position: absolute;
-            left: 75%;
-            transform: translateX(-167px);
+            left: 50%;
+            transform: translateX(120px);
             top: calc(50% - 334px);
             bottom: calc(50% - 334px);
             margin: 0;
@@ -146,6 +154,7 @@
             }
 
             .phone {
+                bottom: 0;
                 opacity: 1;
                 position: relative;
             }
@@ -154,6 +163,19 @@
         .subtitle, .title, .description {
             text-align: left;
             padding: 0;
+        }
+
+        .subtitle {
+            font-size: 17px;
+        }
+
+        .title {
+            font-size: 48px;
+        }
+
+        .description {
+        margin-top: 36px;
+            font-size: 18px;
         }
     }
 }

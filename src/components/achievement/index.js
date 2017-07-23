@@ -11,14 +11,13 @@ export default new Vue({
 
   methods: {
     beforeEnter() {
-
+      outlines.expand('bottom')
+      outlines.expandBottomExtra()
     },
     
     onEnter() {
       this.isExiting = false
       corner.white()
-      outlines.expand('bottom')
-      outlines.expandBottomExtra()
     },
 
     beforeLeave() {
