@@ -24,14 +24,17 @@ export default new Vue({
     black() {
       this.isBlack = true
       this.isWhite = false
+      this.isHidden = false
     },
     white() {
       this.isBlack = false
       this.isWhite = true
+      this.isHidden = false
     },
     red() {
       this.isBlack = false
       this.isWhite = false
+      this.isHidden = false
     }
   }
 })

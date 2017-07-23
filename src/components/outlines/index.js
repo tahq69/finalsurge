@@ -4,7 +4,9 @@ export default new Vue({
     return {
       isLeftSolid: true,
       isTopSolid: true,
-      isBottomSolid: false
+      isBottomSolid: false,
+      isFirstPage: true,
+      isExtraExpanded: false,
     }
   },
   methods: {
@@ -21,6 +23,18 @@ export default new Vue({
     },
     capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
+    },
+    setPageOne() {
+      this.isFirstPage = true
+    },
+    setOtherPage() {
+      this.isFirstPage = false
+    },
+    expandBottomExtra() {
+      this.isExtraExpanded = true
+    },
+    removeBottomExtra() {
+      this.isExtraExpanded = false
     }
   }
 })

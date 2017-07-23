@@ -43,6 +43,7 @@
 }
 
 .page-title {
+    color: #595975;
     position: relative;
     font-size: 27px;
     font-weight: 300;
@@ -50,18 +51,28 @@
     text-align: center;
     margin-top: 103px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 
     .underline {
         width: 28px;
+        height: 1px;
+        background: #F04444;
         position: absolute;
-        bottom: -8px;
+        bottom: -3px;
         left: calc(50% - 14px);
-        border-bottom: 1px solid #F04444;
     }
 }
 
 @media (min-width: $screen-sm-min) {
     .page-title {
-        margin-top: -6px;
+        font-size: 48px;
+        margin-top: 2px;
+
+        .underline {
+            width: 46px;
+            height: 2px;
+            bottom: -18px;
+            left: calc(50% - 23px);
+        }
     }
 }

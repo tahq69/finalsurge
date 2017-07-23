@@ -8,8 +8,8 @@
     .top {
         position: fixed;
         left: calc(50% - 83px);
-        top: 48px;
-        opacity: 0.15;
+        top: 52px;
+        opacity: 0.08;
         color: #6F6F84;
         font-size: 119px;
         font-weight: bold;
@@ -23,7 +23,7 @@
             opacity: 1;
 
             &.t {
-                bottom: 100px;
+                bottom: 400px;
                 opacity: 0;
             }
         }
@@ -33,7 +33,7 @@
         position: fixed;
         top: calc(50% - 31px);
         height: 62px;
-        width: ($outline-padding * 2);
+        width: $outline-padding * 2;
         transition: $pager-transition;
 
         .number {
@@ -44,6 +44,7 @@
 
         .curr {
             @extend .number;
+
             margin-left: $outline-padding - 15px;
             transition: $pager-transition;
             color: #E84B3C;
@@ -56,6 +57,7 @@
 
         .total {
             @extend .number;
+
             right: calc(50% - 15px);
             bottom: 0px;
             color: #595975;
@@ -75,7 +77,8 @@
 @media (min-width: $screen-sm-min) {
     #pager {
         .top {
-            top: 20px;
+            top: $outline-padding - 101px;
+            font-size: 202px;
         }
     }
 }

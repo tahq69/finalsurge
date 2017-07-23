@@ -3,6 +3,6 @@ $icon-color: #94AAB8;
 $outline-padding: 80px;
 $outline-color: #C6D6E0;
 $transition: all ease 1.5s;
-$fast-transition: all ease .75s;
+$fast-transition: $transition /* all ease .75s */;
 $outline-transition: $transition;
 $pager-transition: $fast-transition;

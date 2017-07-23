@@ -13,7 +13,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Bebas Neue', sans-serif;
     }
 
     #loading {
@@ -44,7 +44,7 @@
 
   <div id="outlines" class="hidden-xs">
 
-    <div id="line-t">
+    <div id="line-t" :class="{one: isFirstPage}">
       <div class="line-t-l oh" :class="{f: isTopSolid}">
         <div class="line-t-l-l oh"><span class="line"></span></div>
         <div class="line-t-l-r oh"><span class="line"></span></div>
@@ -64,10 +64,10 @@
     </div>
 
     <div id="line-b">
-      <div class="line-b-l oh" :class="{f: isBottomSolid}">
+      <div class="line-b-l oh" :class="{f: isBottomSolid, e: isExtraExpanded}">
         <div class="line"></div>
       </div>
-      <div class="line-b-r oh" :class="{f: isBottomSolid}">
+      <div class="line-b-r oh" :class="{f: isBottomSolid, e: isExtraExpanded}">
         <div class="line"></div>
       </div>
     </div>
@@ -170,14 +170,14 @@
       </div>
       <!-- /.section -->
 
-      <div class="section">
+      <div class="section" id="features">
         <div class="ds-section">
           <h2 class="page-title">Top features <i class="underline"></i></h2>
         </div>
       </div>
       <!-- /.section -->
 
-      <div class="section">
+      <div class="section" id="testimonials">
         <div class="ds-section">
           <h2 class="page-title">Testimonals <i class="underline"></i></h2>
         </div>

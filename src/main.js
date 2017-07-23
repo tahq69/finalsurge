@@ -8,8 +8,5 @@ import share from './components/share'
 
 import './sass/styles.scss'
 
-let pagination = pager(outlines, scroll, corner, logo, share)
-let slides = slider(pagination, outlines)
-
 var loading = document.getElementById('loading')
 loading.style.display = 'none'

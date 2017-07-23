@@ -6,8 +6,8 @@
     opacity: 1;
 
     &.h {
-        right: 0;
-        top: 0;
+        /*right: -100px;*/
+        top: -100px;
         padding: 0;
         opacity: 0;
     }
@@ -31,6 +31,7 @@
             color: #FFFFFF;
             font-size: 11px;
             font-weight: 500;
+            font-family: 'Roboto', sans-serif;
             text-align: center;
             padding: 9px 15px;
             height: auto;
@@ -48,7 +49,6 @@
             }
 
             &.w {
-                font-weight: 500;
                 background-color: #FFFFFF;
                 color: #2B2E3D;
             }
@@ -59,10 +59,16 @@
 @media (min-width: $screen-sm-min) {
     #corner-t-r {
         right: $outline-padding - 13px;
-        top: $outline-padding - 13px;
+        top: $outline-padding - 18px;
 
         a.download {
-            margin: 0;
+            font-size: 14px;
+            margin: -6px 13px 0 0;
+            padding: 15px 21px;
+
+            &.h {
+                margin: 0;
+            }
         }
     }
 }

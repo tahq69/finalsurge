@@ -53,7 +53,19 @@
         }
 
         .page-content {
+            font-size: 22px;
             margin: 0 25% 43px 25%;
+        }
+
+        .page-footer {
+            bottom: -9.5px;
+            left: 0;
+            right: 0;
+
+            .footer-link {
+                font-size: 16px;
+                margin: 0 8px;
+            }
         }
     }
 }
