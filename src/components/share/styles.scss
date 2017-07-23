@@ -1,4 +1,3 @@
-
 #social-share {
     transition: $transition;
     background-color: $bg-color;
@@ -11,6 +10,15 @@
         display: inline-block;
         text-decoration: none;
         padding: 8px;
+
+        i {
+            transition: $action-transition;
+            font-size: 21px;
+        }
+
+        &:hover i {
+            color: #595975;
+        }
     }
 
     .share {

@@ -71,6 +71,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 
+    &.lite {
+        color: white;
+    }
+
     .underline {
         width: 28px;
         height: 1px;

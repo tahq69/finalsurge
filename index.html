@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>finalsurge</title>
+  <title>Training and coaching platform | Final Surge</title>
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Training and coaching platform" />
+  <meta property="og:description"   content="Empowering athletes and coaches to reach fitness and performance excellence like never before." />
+  <meta property="og:image"         content="http://finalsurge.crip.lv/dist/logo.png" />
+
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <style>
     html,
@@ -104,9 +109,9 @@
   </div>
 
   <div id="social-share" class="hidden-xs" :class="{h: !isVisible}">
-    <a href="#" class="share-btn"><i class="icon-twitter"></i></a>
-    <a href="#" class="share-btn"><i class="icon-facebook"></i></a>
-    <a href="#" class="share-btn"><i class="icon-linkedin"></i></a>
+    <a href="#" @click.prevent="tweet" class="share-btn"><i class="icon-twitter"></i></a>
+    <a href="#" @click.prevent="facebook" class="share-btn"><i class="icon-facebook"></i></a>
+    <a href="#" @click.prevent="linkedin" class="share-btn"><i class="icon-linkedin"></i></a>
     <span class="share">Share</span>
   </div>
 
@@ -308,7 +313,7 @@
 
       <div class="section" id="achievement">
         <div class="ds-section">
-          <h2 class="page-title">Achivement <i class="underline"></i></h2>
+          <h2 class="page-title lite">Achivement <i class="underline"></i></h2>
           <h3 class="content-title">TRAIN WITH A PURPOSE <small>TM</small></h3>
           <p class="page-content">Whether you are the coach, athlete, team or club training for a first 5K, a marathon, 
             or an ultra triathlon, Final Surge provides the structure, accountability, and support to achieve fitness 

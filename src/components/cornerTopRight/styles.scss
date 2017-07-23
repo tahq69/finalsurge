@@ -1,6 +1,6 @@
 #corner-t-r {
     right: 26px;
-    top: 22px;
+    top: 18px;
     transition: $fast-transition;
     position: fixed;
     opacity: 1;
@@ -17,11 +17,6 @@
         opacity: 1;
         height: 28px;
 
-        &.h {
-            opacity: 0;
-            display: none;
-        }
-
         &.home {
             font-size: 27px;
         }
@@ -37,7 +32,7 @@
             height: auto;
             border-radius: 60px;
             background-color: #E84B3C;
-            margin: 8px 2px 0 0;
+            margin: 10px 2px 0 0;
 
             &.h {
                 width: 0;
@@ -52,6 +47,11 @@
                 background-color: #FFFFFF;
                 color: #2B2E3D;
             }
+        }
+
+        &.h {
+            opacity: 0;
+            display: none;
         }
     }
 }
