@@ -29,9 +29,8 @@
 
 @media (min-width: $screen-sm-min) {
     #page-logo {
-        top: $outline-padding / 2;
+        top: $outline-padding;
+        transform: translateY(-38px);
         left: $outline-padding * 3;
-        padding: 0 $outline-padding / 2;
-        background-color: $bg-color;
     }
 }

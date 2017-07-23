@@ -1,5 +1,59 @@
-
 #achievement {
+    text-align: center;
     color: #fff;
-    background-color: #0E162F;
+    background: #0E162F url("../assets/achievement-bg.jpg") center center no-repeat;
+    background-size: auto 100%;
+
+    .icon-appstore {
+        font-size: 60px;
+    }
+
+    .content-title {
+        font-size: 36px;
+        font-weight: bold;
+
+        small {
+            font-size: 10px;
+            font-family: 'Roboto';
+            font-weight: 300;
+        }
+    }
+
+    .page-content {
+        font-family: 'Roboto';
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0 20px 32px 20px;
+    }
+
+    .page-footer {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+
+        .footer-link {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-family: 'Roboto';
+            font-size: 10px;
+            margin: 0 8px;
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    #achievement {
+        .content-title {
+            font-size: 90px;
+
+            small {
+                font-size: 12px;
+            }
+        }
+
+        .page-content {
+            margin: 0 25% 43px 25%;
+        }
+    }
 }

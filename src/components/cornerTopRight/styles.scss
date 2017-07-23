@@ -36,8 +36,7 @@
             height: auto;
             border-radius: 60px;
             background-color: #E84B3C;
-            right: 28px;
-            top: 33px;
+            margin: 8px 2px 0 0;
 
             &.h {
                 width: 0;
@@ -61,5 +60,9 @@
     #corner-t-r {
         right: $outline-padding - 13px;
         top: $outline-padding - 13px;
+
+        a.download {
+            margin: 0;
+        }
     }
 }
