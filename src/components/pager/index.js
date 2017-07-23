@@ -30,6 +30,12 @@ export default new Vue({
 
       corner.hide()
       this.isPageAway = true
-    }
+    },
+    hide() {
+      this.$el.style.display = 'none';
+    },
+    show() {
+      this.$el.style.display = 'block';
+    },
   }
 })

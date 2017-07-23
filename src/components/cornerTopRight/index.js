@@ -13,6 +13,9 @@ export default new Vue({
     hide() {
       this.isHidden = true
     },
+    show() {
+      this.isHidden = false
+    },
     hideHome() {
       this.isHomeVisible = false
       this.isHidden = false

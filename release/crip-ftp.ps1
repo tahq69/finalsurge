@@ -85,3 +85,5 @@ Upload-FtpFiles $webclient "$dir/dist/*" $ftp 'finalsurge/dist'
 Create-FtpDirectory $ftp 'finalsurge/dist/coach' $user $pass
 Upload-FtpFiles $webclient "$dir/dist/coach/*" $ftp 'finalsurge/dist/coach'
 
+Create-FtpDirectory $ftp 'finalsurge/dist/app-screens' $user $pass
+Upload-FtpFiles $webclient "$dir/dist/app-screens/*" $ftp 'finalsurge/dist/app-screens'

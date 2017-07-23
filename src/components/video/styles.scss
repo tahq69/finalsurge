@@ -42,8 +42,8 @@
         background-size: auto 100%;
 
         &.l {
-            top: 100%;
-            left: 100%;
+            /*top: 100%;
+            left: 100%;*/
         }
     }
 }
@@ -67,7 +67,6 @@
         }
 
         .bg {
-            transition: $transition;
             position: absolute;
             top: 0;
             left: 0;
@@ -78,8 +77,8 @@
             background-size: auto 100%;
 
             &.l {
-                top: 100%;
-                left: 100%;
+                /*top: 100%;
+                left: 100%;*/
             }
         }
     }

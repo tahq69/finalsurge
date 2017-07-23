@@ -1,6 +1,6 @@
 export default new Vue({
   name: 'logo',
-  el:'#page-logo',
+  el: '#page-logo',
   data() {
     return {
       isMinimized: false
@@ -12,6 +12,12 @@ export default new Vue({
     },
     maximize() {
       this.isMinimized = false
-    }
+    },
+    hide() {
+      this.$el.style.display = 'none';
+    },
+    show() {
+      this.$el.style.display = 'block';
+    },
   }
 })

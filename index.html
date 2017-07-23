@@ -116,8 +116,8 @@
 
   <div class="wrap ds-parent">
     <div class="ds-container">
-      <div class="section">
-        <div id="home" class="ds-section">
+      <div class="section" id="home">
+        <div class="ds-section">
           <div class="radial-gradient visible-xs"></div>
 
           <div class="left-side">
@@ -131,7 +131,7 @@
             <div class="bottom-part" :class="{h: isExiting}">
               <span class="app-store"> 
                 <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
-                <span class="icon-android"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                <span class="icon-android hidden-xs"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
             </div>
           </div>
           <div class="right-side" :class="{h: isExiting}">
@@ -171,7 +171,25 @@
       <div class="section" id="features">
         <div class="ds-section">
           <h2 class="page-title">Top features <i class="underline"></i></h2>
-          <div class="page-left">
+          <div class="visible-xs mobile-content">
+            <h3>Take A Closer Look</h3>
+            <p>Tour the details to see why the new Final Surge Mobile App sets a new higher standard for training apps.</p>
+            <a href="#" @click.prevent="openModal" class="open-modal">EXPLORE FEATURES</a>
+          </div>
+          <div class="back-drop" :class="{h: !isModalOpen}">
+            <a href="#" @click.prevent="closeModal" class="close-modal"><i class="icon-close-mobile"></i></a>
+            <a class="arrow left" href="#" @click.prevent="prew"><span class="icon-arrow-left"></span></a>
+            <a class="arrow right" href="#" @click.prevent="next"><span class="icon-arrow-right"></span></a>
+            <div class="description">
+              <span class="dot" :class="activeClass(1)"></span>
+              <span class="dot" :class="activeClass(2)"></span>
+              <span class="dot" :class="activeClass(3)"></span>
+              <span class="dot" :class="activeClass(4)"></span>
+              <span class="dot" :class="activeClass(5)"></span>
+              <span class="dot" :class="activeClass(6)"></span>
+            </div>
+          </div>
+          <div class="page-left" :class="{h: !isModalOpen}">
             <ul class="feature-btns clearfix">
               <li :class="featureClass(1)"><a href="#" @click.prevent="open(1)">1</a></li>
               <li :class="featureClass(2)"><a href="#" @click.prevent="open(2)">2</a></li>
@@ -221,7 +239,7 @@
               </li>
             </ul>
           </div>
-          <div class="page-right">
+          <div class="page-right" :class="{h: !isModalOpen}">
             <ul class="feature-screens">
               <li :class="featureClass(1)"><img src="/dist/app-screens/scene-5-3.png"></li>
               <li :class="featureClass(2)"><img src="/dist/app-screens/scene-5-3.png"></li>
