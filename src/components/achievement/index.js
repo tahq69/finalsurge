@@ -23,9 +23,6 @@ export default new Vue({
     beforeLeave() {
       this.isExiting = true
       outlines.solid('bottom')
-    },
-
-    afterLeave() {
       outlines.removeBottomExtra()
     }
   }
