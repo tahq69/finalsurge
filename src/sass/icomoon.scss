@@ -1,10 +1,7 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('../assets/fonts/icomoon.eot?50djzo');
-    src: url('../assets/fonts/icomoon.eot?50djzo#iefix') format('embedded-opentype'),
-     url('../assets/fonts/icomoon.ttf?50djzo') format('truetype'),
-     url('../assets/fonts/icomoon.woff?50djzo') format('woff'),
-     url('../assets/fonts/icomoon.svg?50djzo#icomoon') format('svg');
+    src: url("../assets/fonts/icomoon.eot?50djzo");
+    src: url("../assets/fonts/icomoon.eot?50djzo#iefix") format("embedded-opentype"), url("../assets/fonts/icomoon.ttf?50djzo") format("truetype"), url("../assets/fonts/icomoon.woff?50djzo") format("woff"), url("../assets/fonts/icomoon.svg?50djzo#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -19,72 +16,209 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $icon-color;
 }
 
-.icon-appstore .path1:before {
+.icon-garmin .path1:before {
     content: "\e900";
-    color: gray;
+    color: rgb(35, 31, 32);
+}
+
+.icon-garmin .path2:before {
+    content: "\e901";
+    margin-left: -3.6318359375em;
+    color: rgb(0, 113, 206);
+}
+
+.icon-garmin .path3:before {
+    content: "\e902";
+    margin-left: -3.6318359375em;
+    color: rgb(35, 31, 32);
+}
+
+.icon-strava .path1:before {
+    content: "\e903";
+    color: rgb(252, 76, 2);
+}
+
+.icon-strava .path2:before {
+    content: "\e904";
+    margin-left: -2.904296875em;
+    color: rgb(252, 76, 2);
+}
+
+.icon-strava .path3:before {
+    content: "\e905";
+    margin-left: -2.904296875em;
+    color: rgb(252, 76, 2);
+}
+
+.icon-strava .path4:before {
+    content: "\e906";
+    margin-left: -2.904296875em;
+    color: rgb(252, 76, 2);
+}
+
+.icon-strava .path5:before {
+    content: "\e907";
+    margin-left: -2.904296875em;
+    color: rgb(252, 76, 2);
+}
+
+.icon-strava .path6:before {
+    content: "\e908";
+    margin-left: -2.904296875em;
+    color: rgb(252, 76, 2);
+}
+
+.icon-strava .path7:before {
+    content: "\e909";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path8:before {
+    content: "\e90a";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path9:before {
+    content: "\e90b";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path10:before {
+    content: "\e90c";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path11:before {
+    content: "\e90d";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path12:before {
+    content: "\e90e";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path13:before {
+    content: "\e90f";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path14:before {
+    content: "\e910";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path15:before {
+    content: "\e911";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path16:before {
+    content: "\e912";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path17:before {
+    content: "\e913";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-strava .path18:before {
+    content: "\e914";
+    margin-left: -2.904296875em;
+    color: rgb(153, 153, 153);
+}
+
+.icon-arrow-down:before {
+    content: "\e915";
+}
+
+.icon-arrow-left:before {
+    content: "\e916";
+}
+
+.icon-arrow-right:before {
+    content: "\e917";
+}
+
+.icon-close-mobile:before {
+    content: "\e918";
+}
+
+.icon-facebook:before {
+    content: "\e919";
+}
+
+.icon-home:before {
+    content: "\e91a";
+}
+
+.icon-linkedin:before {
+    content: "\e91b";
+}
+
+.icon-share:before {
+    content: "\e91c";
+}
+
+.icon-twitter:before {
+    content: "\e91d";
+}
+
+.icon-android .path1:before {
+    content: "\e91e";
+    color: rgb(148, 170, 184);
+}
+
+.icon-android .path2:before {
+    content: "\e91f";
+    margin-left: -2.921875em;
+    color: none;
+}
+
+.icon-android .path3:before {
+    content: "\e920";
+    margin-left: -2.921875em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-appstore .path1:before {
+    content: "\e921";
+    color: #A6A6A6;;
 }
 
 .icon-appstore .path2:before {
-    content: "\e901";
+    content: "\e922";
     margin-left: -3.375em;
     color: rgb(0, 0, 0);
 }
 
 .icon-appstore .path3:before {
-    content: "\e902";
+    content: "\e923";
     margin-left: -3.375em;
     color: rgb(255, 255, 255);
 }
 
 .icon-appstore .path4:before {
-    content: "\e903";
+    content: "\e924";
     margin-left: -3.375em;
     color: rgb(255, 255, 255);
-}
-
-.icon-android-badge .path1:before {
-    content: "\e904";
-    color: rgb(148, 170, 184);
-}
-
-.icon-android-badge .path2:before {
-    content: "\e905";
-    margin-left: -2.921875em;
-    color: none;
-}
-
-.icon-android-badge .path3:before {
-    content: "\e906";
-    margin-left: -2.921875em;
-    color: rgb(255, 255, 255);
-}
-
-.icon-arrow-left:before {
-    content: "\e907";
-}
-
-.icon-arrow-right:before {
-    content: "\e908";
-}
-
-.icon-Facebook:before {
-    content: "\e909";
-}
-
-.icon-Linkedin:before {
-    content: "\e90a";
-}
-
-.icon-Twitter:before {
-    content: "\e90b";
-}
-
-.icon-home:before {
-    content: "\e90c";
 }

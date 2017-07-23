@@ -99,14 +99,14 @@
   </div>
 
   <div id="corner-t-r" :class="{h: isHidden}">
-    <a href="#" class="corner-btn home" :class="{h: !isHomeVisible}"><i class="icon-home"></i></a>
+    <a href="#" class="corner-btn home" :class="{h: !isHomeVisible}"><span class="icon-home"></span></a>
     <a href="#" class="corner-btn download" :class="{h: isHomeVisible, b: isBlack, w: isWhite}">DOWNLOAD iOS</a>
   </div>
 
   <div id="social-share" class="hidden-xs" :class="{h: !isVisible}">
-    <a href="#" class="share-btn"><i class="icon-Twitter"></i></a>
-    <a href="#" class="share-btn"><i class="icon-Facebook"></i></a>
-    <a href="#" class="share-btn"><i class="icon-Linkedin"></i></a>
+    <a href="#" class="share-btn"><i class="icon-twitter"></i></a>
+    <a href="#" class="share-btn"><i class="icon-facebook"></i></a>
+    <a href="#" class="share-btn"><i class="icon-linkedin"></i></a>
     <span class="share">Share</span>
   </div>
 
@@ -130,8 +130,8 @@
             </div>
             <div class="bottom-part" :class="{h: isExiting}">
               <span class="app-store"> 
-                <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></span>
-                <span class="android hidden-xs"><span class="icon-android-badge"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></span>
+                <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+                <span class="icon-android"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
             </div>
           </div>
           <div class="right-side" :class="{h: isExiting}">
@@ -159,9 +159,9 @@
           </div>
           <div class="video-share">
             <p class="share-title">Share the video</p>
-            <a href="#" class="share-btn"><i class="icon-Twitter"></i></a>
-            <a href="#" class="share-btn"><i class="icon-Facebook"></i></a>
-            <a href="#" class="share-btn"><i class="icon-Linkedin"></i></a>
+            <a href="#" class="share-btn"><span class="icon-twitter"></span></a>
+            <a href="#" class="share-btn"><span class="icon-facebook"></span></a>
+            <a href="#" class="share-btn"><span class="icon-linkedin"></span></a>
           </div>
         </div>
         <div class="bg" :class="{l: isExiting}"></div>
@@ -171,6 +171,71 @@
       <div class="section" id="features">
         <div class="ds-section">
           <h2 class="page-title">Top features <i class="underline"></i></h2>
+          <div class="page-left">
+            <ul class="feature-btns clearfix">
+              <li :class="featureClass(1)"><a href="#" @click.prevent="open(1)">1</a></li>
+              <li :class="featureClass(2)"><a href="#" @click.prevent="open(2)">2</a></li>
+              <li :class="featureClass(3)"><a href="#" @click.prevent="open(3)">3</a></li>
+              <li :class="featureClass(4)"><a href="#" @click.prevent="open(4)">4</a></li>
+              <li :class="featureClass(5)"><a href="#" @click.prevent="open(5)">5</a></li>
+              <li :class="featureClass(6)"><a href="#" @click.prevent="open(6)">6</a></li>
+            </ul>
+            <ul class="feature-list">
+              <li :class="featureClass(1)">
+                <h3>Daily Workout View</h3>
+                <p>The Daily View shows basic workout data, plus whether the workout is planned or completed. The workout is
+                  color-coded to indicate whether the workout was completed as planned (Green)… and if not completed as planned,
+                  color-coding indicates whether the workout was simply missed (Red)… or was under, or over, performed (Yellow).</p>
+              </li>
+              <li :class="featureClass(2)">
+                <h3>Weekly Workout View</h3>
+                <p>The Weekly View doesn’t require you to awkwardly put your phone into a landscape position. An entire week
+                  of workouts is shown and workouts are color-coded to instantly show you the status of each workout. The
+                  Weekly View also shows planned and completed weekly totals by workout type to confirm if you are on plan
+                  with just a glance.</p>
+              </li>
+              <li :class="featureClass(3)">
+                <h3>Easily Enter Workouts</h3>
+                <p>The Complete As Planned button on the workout entry screen automatically enters Distance, Duration, and Pace,
+                  plus you can easily add How You Felt, your Perceived Effort, and Workout Notes. The App automatically syncs
+                  from your tracking devices through platforms like Garmin Connect®, Strava®, MapMyRun®, and others.</p>
+              </li>
+              <li :class="featureClass(4)">
+                <h3>Splits, Maps, Graphs & More</h3>
+                <p>If you are using a sports watch, bike computer or similar tracking device and want to dive into every detail
+                  about this workout, the App shows laps (splits), the workout map and route, selectable workout graphs,
+                  charts, and HR and power zones, gear, weather, and more.</p>
+              </li>
+              <li :class="featureClass(5)">
+                <h3>Coach Athlete Communication</h3>
+                <p>Easy and effective Coach and Athlete communication is one of the most important tools in accomplishing fitness
+                  and performance success. The App uses the familiar text messaging conversation format to support and recall
+                  conversations for each and every workout as needed. </p>
+              </li>
+              <li :class="featureClass(6)">
+                <h3>Coach or Athlete or Both</h3>
+                <p>Unlike others, with Final Surge App you just log in once if you are both a Coach and an Athlete. Coaches
+                  can easily review and manage their Athletes’ and Teams’ Workout Calendars. Team and Group calendars, internal
+                  message boards and individual messaging make this App ideal for high school, collegiate, professional and
+                  club teams.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="page-right">
+            <ul class="feature-screens">
+              <li :class="featureClass(1)"><img src="/dist/app-screens/scene-5-3.png"></li>
+              <li :class="featureClass(2)"><img src="/dist/app-screens/scene-5-3.png"></li>
+              <li :class="featureClass(3)"><img src="/dist/app-screens/scene-5-3.png"></li>
+              <li :class="featureClass(4)"><img src="/dist/app-screens/scene-5-3.png"></li>
+              <li :class="featureClass(5)"><img src="/dist/app-screens/scene-5-3.png"></li>
+              <li :class="featureClass(6)"><img src="/dist/app-screens/scene-5-3.png"></li>
+            </ul>
+          </div>
+          <footer class="compatibilities">
+            <span class="icon-strava"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span>
+            <span class="icon-garmin"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+          </footer>
+          <div class="bg"></div>
         </div>
       </div>
       <!-- /.section -->
@@ -180,8 +245,8 @@
           <h2 class="page-title">Testimonals <i class="underline"></i></h2>
           <h3 class="content-title">Top Coaches use Final Surge</h3>
           <div class="coach-list">
-            <a class="arrow left" href="#" @click.prevent="prew"><i class="icon-arrow-left"></i></a>
-            <a class="arrow right" href="#" @click.prevent="next"><i class="icon-arrow-right"></i></a>
+            <a class="arrow left" href="#" @click.prevent="prew"><span class="icon-arrow-left"></span></a>
+            <a class="arrow right" href="#" @click.prevent="next"><span class="icon-arrow-right"></span></a>
             <ul class="coach-thumbnails">
               <li :class="coach1"><a href="#" @click.prevent="active(1)"><img src="/dist/coach/ben-rosario.png" alt="Ben Rosario"></a></li>
               <li :class="coach2"><a href="#" @click.prevent="active(2)"><img src="/dist/coach/colin-cook.png" alt="Colin Cook"></a></li>
@@ -230,7 +295,7 @@
           <p class="page-content">Whether you are the coach, athlete, team or club training for a first 5K, a marathon, 
             or an ultra triathlon, Final Surge provides the structure, accountability, and support to achieve fitness 
             and performance excellence like never before.</p>
-          <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></span>
+          <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
           <footer class="page-footer">
             <a href="#" class="footer-link">HELP CENTER</a>
             <a href="#" class="footer-link">LICENCE</a>

@@ -6,13 +6,23 @@ export default new Vue({
 
   data: {
     isExiting: true,
+    currentFeature: 1,
   },
 
   methods: {
-    beforeEnter() {
+    featureClass(feature) {
+      if (this.currentFeature == feature)
+        return ['active', 'feature']
 
+      return ['feature', feature < this.currentFeature ? 'left' : 'right']
     },
-    
+
+    open(feature) {
+      this.currentFeature = feature
+    },
+
+    beforeEnter() { },
+
     onEnter() {
       this.isExiting = false
       corner.black()

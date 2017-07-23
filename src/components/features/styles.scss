@@ -1,0 +1,147 @@
+#features {}
+
+$feature-width: 340px;
+$screens-width: 340px;
+
+@media (min-width: $screen-sm-min) {
+    #features {
+        .page-left {
+            z-index: 2;
+            width: $feature-width;
+            position: absolute;
+            left: calc(50% - 490px);
+            top: 140px;
+
+            .feature-btns {
+                padding: 0;
+                list-style: none;
+
+                .feature {
+                    float: left;
+
+                    &.active a, &:hover a {
+                        color: #E84B3C;
+                        border-color: #E84B3C;
+                    }
+
+                    a {
+                        transition: $action-transition;
+                        display: block;
+                        padding: 8px 15px;
+                        border-radius: 39px;
+                        border: 1px solid #C7D7E1;
+                        color: #D1DEE6;
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin: 0 8px;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .feature-list {
+                padding: 0;
+                list-style: none;
+                position: relative;
+
+                .feature {
+                    transition: $action-transition;
+                    position: absolute;
+                    width: $feature-width;
+                    left: 0;
+                    opacity: 0;
+
+                    &.right {
+                        left: $feature-width * 3;
+                    }
+
+                    &.left {
+                        left: -$feature-width * 3;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+
+                h3 {
+                    color: #6F6F84;
+                    font-size: 45px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                }
+
+                p {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #6F6F84;
+                }
+            }
+        }
+
+        .page-right {
+            z-index: 2;
+            width: $screens-width;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-40px);
+            top: 140px;
+
+            .feature-screens {
+                list-style: none;
+                position: relative;
+
+                img {
+                    width: 334px;
+                    box-shadow: 0 2px 59px 0 rgba(83, 90, 95, 0.22);
+                }
+
+                .feature {
+                    transition: $action-transition;
+                    position: absolute;
+                    left: 0;
+                    opacity: 0;
+
+                    &.right {
+                        left: $screens-width * 3;
+                    }
+
+                    &.left {
+                        left: -$screens-width * 3;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .compatibilities {
+            z-index: 2;
+            width: $feature-width;
+            position: absolute;
+            left: calc(50% - 490px);
+            bottom: 100px;
+            font-size: 32px;
+
+            .icon-strava {
+                margin-right: 38px;
+            }
+        }
+
+        .bg {
+            z-index: 1;
+            background: transparent url("../assets/features-bg.png") no-repeat;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            background-position: right bottom;
+            background-size: auto 100%;
+            opacity: 0.85;
+        }
+    }
+}
