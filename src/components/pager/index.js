@@ -28,7 +28,6 @@ export default new Vue({
         this.isInvisible = true
       }
 
-      corner.hide()
       this.isPageAway = true
     },
     hide() {

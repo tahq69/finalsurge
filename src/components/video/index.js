@@ -9,11 +9,13 @@ export default new Vue({
   },
 
   methods: {
-    beforeEnter() { },
+    beforeEnter() {
+      corner.hideHome()
+     },
 
     onEnter() {
       this.isExiting = false
-      corner.red()
+      corner.black()
     },
 
     beforeLeave() {

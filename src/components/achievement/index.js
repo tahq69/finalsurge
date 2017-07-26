@@ -14,7 +14,7 @@ export default new Vue({
       outlines.expand('bottom')
       outlines.expandBottomExtra()
     },
-    
+
     onEnter() {
       this.isExiting = false
       corner.white()

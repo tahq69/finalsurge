@@ -23,18 +23,15 @@ export default new Vue({
   methods: {
     beforeEnter() {
       logo.maximize()
+      outlines.solid('left', 'top')
+      outlines.expand('bottom')
     },
 
     onEnter() {
       this.isExiting = false;
       outlines.setPageOne()
-      outlines.solid('left', 'top')
-      outlines.expand('bottom')
-
       share.show()
-
       scroll.show()
-
       corner.showHome()
     },
 
@@ -52,6 +49,7 @@ export default new Vue({
     },
 
     afterLeave() {
+      debugger
       corner.hideHome()
     }
   }

@@ -22,6 +22,7 @@
         }
 
         &.download {
+            transition: $transition;
             display: inline-block;
             color: #FFFFFF;
             font-size: 11px;
@@ -31,8 +32,11 @@
             padding: 9px 15px;
             height: auto;
             border-radius: 60px;
-            background-color: #E84B3C;
             margin: 10px 2px 0 0;
+
+            &:hover, &.b:hover, &.w:hover {
+                background-color: #E84B3C;
+            }
 
             &.h {
                 width: 0;

@@ -25,18 +25,15 @@ export default new Vue({
       this.isHidden = false
     },
     black() {
+      this.isHomeVisible = false
       this.isBlack = true
       this.isWhite = false
       this.isHidden = false
     },
     white() {
+      this.isHomeVisible = false
       this.isBlack = false
       this.isWhite = true
-      this.isHidden = false
-    },
-    red() {
-      this.isBlack = false
-      this.isWhite = false
       this.isHidden = false
     }
   }
