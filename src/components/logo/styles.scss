@@ -2,7 +2,7 @@
 #page-logo {
     position: fixed;
     top: 27px;
-    left: calc(50% - 38px);
+    left: calc(50% - 49px);
 }
 
 @media (max-width: $screen-xs-max) { 
@@ -18,7 +18,7 @@
         &.m {
             left: 29px;
             top: 26px;
-            
+
             img {
                 width: 38px;
                 height: 38px;
@@ -30,7 +30,7 @@
 @media (min-width: $screen-sm-min) {
     #page-logo {
         top: $outline-padding;
-        transform: translateY(-38px);
-        left: $outline-padding * 3;
+        left: $outline-padding * 2;
+        transform: translateY(-49px);
     }
 }

@@ -29,7 +29,7 @@ div[class*=' line-'] {
     transition: $outline-transition;
     left: $outline-padding;
     top: $outline-padding;
-    right: $outline-padding + 175px;
+    right: $outline-padding + 166px;
     height: 1px;
 
     &.one {
@@ -47,26 +47,28 @@ div[class*=' line-'] {
             transform: translateX(0px);
 
             .line-t-l-l {
-                transform: translateX(-40px);
+                width: $outline-padding;
+                transform: translateX(-17px);
+                left: 0;
             }
 
             .line-t-l-r {
-                transform: translateX($outline-padding * 2 + 40px + 72px);
+                transform: translateX($outline-padding + 94px + 17px);
             }
         }
 
         .line-t-l-l {
             @extend .line-inner;
 
-            transform: translateX(-40px) translateX(97px);
-            width: $outline-padding * 2;
-            top: 0;
+            width: $outline-padding;
+            transform: translateX(97px - 17px);
+            left: 0;
         }
 
         .line-t-l-r {
             @extend .line-inner;
 
-            transform: translateX($outline-padding * 2 + 40px + 72px) translateX(97px);
+            transform: translateX($outline-padding + 94px + 97px + 17px);
             width: 100%;
             top: 0;
             right: 0;
@@ -76,7 +78,7 @@ div[class*=' line-'] {
     .line-t-r {
         @extend .line-inner;
 
-        transform: translateX(227px);
+        transform: translateX(97px + 166px);
         width: 50%;
         top: 0;
         right: 0;
@@ -134,7 +136,7 @@ div[class*=' line-'] {
     }
 }
 
-$bottom-expanded: 50px;
+$bottom-expanded: 37px;
 $bottom-extra-expanded: 180px;
 
 #line-b {
