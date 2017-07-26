@@ -11,18 +11,22 @@ import outlines from '../outlines'
 var slider = new DoSlide('.ds-container')
 let pages = [home, video, features, testimonials, achievement]
 
+function callIfFunc(obj, meth, ...args) {
+  if (typeof obj[meth] === 'function') {
+    obj[meth].call(obj[meth], args)
+  }
+}
+
 slider.onBeforeChange((curIndex, tarIndex, cur, tar) => {
   pager.leavePage(curIndex + 1, tarIndex + 1)
-  pages[curIndex].beforeLeave(curIndex, cur)
-  pages[tarIndex].beforeEnter(tarIndex, cur)
+  callIfFunc(pages[curIndex], 'beforeLeave', curIndex, cur)
+  callIfFunc(pages[tarIndex], 'beforeEnter', tarIndex, cur)
 })
 
 slider.onChanged((curIndex, lastIndex, cur, last) => {
   pager.setPage(curIndex + 1, lastIndex + 1)
-  pages[curIndex].onEnter(curIndex, cur)
-  if (typeof pages[lastIndex].afterLeave === 'function') {
-    pages[lastIndex].afterLeave(lastIndex, last)
-  }
+  callIfFunc(pages[curIndex], 'onEnter', curIndex, cur)
+  callIfFunc(pages[lastIndex], 'afterLeave', lastIndex, cur)
 })
 
 export default slider

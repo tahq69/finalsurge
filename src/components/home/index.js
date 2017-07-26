@@ -22,6 +22,7 @@ export default new Vue({
 
   methods: {
     beforeEnter() {
+      corner.hide()
       logo.maximize()
       outlines.solid('left', 'top')
       outlines.expand('bottom', 'right')
@@ -32,6 +33,7 @@ export default new Vue({
       outlines.setPageOne()
       share.show()
       scroll.show()
+      corner.show()
       corner.showHome()
     },
 
@@ -46,10 +48,8 @@ export default new Vue({
       scroll.hide()
 
       logo.minimize()
-    },
 
-    afterLeave() {
-      corner.hideHome()
+      corner.hide()
     }
   }
 })

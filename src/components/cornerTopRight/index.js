@@ -18,23 +18,22 @@ export default new Vue({
     },
     hideHome() {
       this.isHomeVisible = false
-      this.isHidden = false
+      this.hide()
     },
     showHome() {
       this.isHomeVisible = true
-      this.isHidden = false
     },
     black() {
       this.isHomeVisible = false
       this.isBlack = true
       this.isWhite = false
-      this.isHidden = false
+      this.show()
     },
     white() {
       this.isHomeVisible = false
       this.isBlack = false
       this.isWhite = true
-      this.isHidden = false
+      this.show()
     }
   }
 })
