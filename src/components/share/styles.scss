@@ -1,14 +1,19 @@
 #social-share {
     transition: $transition;
     position: fixed;
-    right: $outline-padding - 18px;
-    bottom: $outline-padding + 18px;
-    width: 36px;
+    right: $outline-padding - 12px;
+    bottom: $outline-padding + 52px;
+    width: 24px;
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 11px 0;
+    }
 
     a {
         display: inline-block;
         text-decoration: none;
-        padding: 11px 0;
 
         i {
             transition: $action-transition;
@@ -24,13 +29,16 @@
         display: block;
         transform: rotate(270deg);
         text-transform: uppercase;
-        margin: 36px 0px;
-        color: #C6D6E0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        margin: 15px 0px 5px 0;
+        color: #94AAB8;
         font-size: 14px;
         line-height: 16px;
     }
 
     &.h {
         opacity: 0;
+        right: -54px;
     }
 }

@@ -24,7 +24,7 @@ export default new Vue({
     beforeEnter() {
       logo.maximize()
       outlines.solid('left', 'top')
-      outlines.expand('bottom')
+      outlines.expand('bottom', 'right')
     },
 
     onEnter() {
@@ -39,7 +39,7 @@ export default new Vue({
       this.isExiting = true;
       outlines.setOtherPage()
       outlines.expand('left', 'top')
-      outlines.solid('bottom')
+      outlines.solid('bottom', 'right')
 
       share.hide()
 
@@ -49,7 +49,6 @@ export default new Vue({
     },
 
     afterLeave() {
-      debugger
       corner.hideHome()
     }
   }

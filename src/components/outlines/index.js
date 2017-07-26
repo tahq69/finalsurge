@@ -4,6 +4,7 @@ export default new Vue({
     return {
       isLeftSolid: true,
       isTopSolid: true,
+      isRightSolid: false,
       isBottomSolid: false,
       isFirstPage: true,
       isExtraExpanded: false,

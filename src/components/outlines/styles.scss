@@ -33,7 +33,7 @@ div[class*=' line-'] {
     height: 1px;
 
     &.one {
-        right: $outline-padding + 46px;
+        right: $outline-padding + 38px;
     }
 
     .line-t-l {
@@ -109,14 +109,24 @@ div[class*=' line-'] {
         right: 0;
         bottom: 0;
 
+        &.f {
+            .line-r-b-t {
+                transform: translateY(0);
+            }
+
+            .line-r-b-b {
+                transform: translateY(0);
+            }
+        }
+
         .line-r-b-t {
-            transform: translateY(-40px);
+            transform: translateY(-101px);
             height: 50%;
             right: 0;
         }
 
         .line-r-b-b {
-            transform: translateY(40px);
+            transform: translateY(116px);
             height: 50%;
             right: 0;
             bottom: 0;

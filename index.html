@@ -61,7 +61,7 @@
       <div class="line-r-t oh">
         <div class="line"></div>
       </div>
-      <div class="line-r-b oh">
+      <div class="line-r-b oh" :class="{f: isRightSolid}">
         <div class="line-r-b-t"><div class="line"></div></div>
         <div class="line-r-b-b"><div class="line"></div></div>
       </div>
@@ -109,12 +109,12 @@
     <a href="#" class="corner-btn download" :class="{h: isHomeVisible, b: isBlack, w: isWhite}">DOWNLOAD iOS</a>
   </div>
 
-  <div id="social-share" class="hidden-xs" :class="{h: !isVisible}">
-    <a href="#" @click.prevent="tweet" class="share-btn"><i class="icon-twitter"></i></a>
-    <a href="#" @click.prevent="facebook" class="share-btn"><i class="icon-facebook"></i></a>
-    <a href="#" @click.prevent="linkedin" class="share-btn"><i class="icon-linkedin"></i></a>
-    <span class="share">Share</span>
-  </div>
+  <ul id="social-share" class="hidden-xs" :class="{h: !isVisible}">
+    <li><a href="#" @click.prevent="tweet" class="share-btn"><i class="icon-twitter"></i></a></li>
+    <li><a href="#" @click.prevent="facebook" class="share-btn"><i class="icon-facebook"></i></a></li>
+    <li><a href="#" @click.prevent="linkedin" class="share-btn"><i class="icon-linkedin"></i></a></li>
+    <li><span class="share">Share</span></li>
+  </ul>
 
   <div id="scroll-wrap" class="hidden-xs" :class="{p: isScrollInPlace}">
     <img src="/dist/scroll.gif" />
