@@ -12,12 +12,23 @@ export default new Vue({
   mounted() {
     setTimeout(() => {
       this.isExiting = false;
-    }, 100);
+    }, 100)
+
+    let curr = 0
+    setInterval(() => {
+      curr += 1
+      if (!this.bgTextParts[curr])
+        curr = 0
+
+      this.bgText = this.bgTextParts[curr]
+    }, 3000)
   },
 
   data: {
     isExiting: true,
     isScrollInPlace: false,
+    bgText: 'TRAIN',
+    bgTextParts: ['TRAIN', 'WITH A', 'PURPOSE']
   },
 
   methods: {
