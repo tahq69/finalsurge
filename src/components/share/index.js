@@ -3,6 +3,7 @@ export default new Vue({
   el: '#social-share',
   data() {
     return {
+      isIconsVisible: false,
       isVisible: true,
       url: encodeURIComponent('http://finalsurge.crip.lv'),
       text: encodeURIComponent('Training and coaching platform ')
@@ -11,9 +12,14 @@ export default new Vue({
   methods: {
     show() {
       this.isVisible = true
+      this.hideIcons()
     },
     hide() {
       this.isVisible = false
+      this.hideIcons()
+    },
+    hideIcons() {
+      this.isIconsVisible = false;
     },
     tweet() {
       let url = `https://twitter.com/home?status=${this.text + this.url}`
@@ -29,7 +35,11 @@ export default new Vue({
       this.window(url)
     },
     window(url) {
+      this.hideIcons()
       window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600')
+    },
+    toggleIcons() {
+      this.isIconsVisible = !this.isIconsVisible;
     }
   }
 })

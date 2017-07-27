@@ -1,13 +1,13 @@
 #home {
     .left-side {
-        padding-top: 68px;
+        padding-top: 38px;
 
         .bottom-part {
             z-index: 10;
             font-size: 60px;
             position: absolute;
             left: calc(50% - 101px);
-            bottom: 60px;
+            bottom: 0px;
 
             .store-link {
                 transition: $action-transition;
@@ -28,9 +28,9 @@
 
         .phone {
             position: absolute;
-            right: 0;
-            left: 0;
-            bottom: -400px;
+            right: 50%;
+            transform: translateX(163px);
+            bottom: -500px;
             margin: 0 auto;
             opacity: .5;
             width: 334px;
@@ -95,7 +95,7 @@
         font-weight: bold;
         letter-spacing: 1px;
         text-align: center;
-        padding: 0 50px;
+        padding: 0 20px;
         margin: 10px 0 17px 0;
     }
 
@@ -105,7 +105,7 @@
         font-size: 14px;
         font-weight: 400;
         text-align: center;
-        padding: 0 60px;
+        padding: 0 30px;
         margin-top: 17px;
     }
 }

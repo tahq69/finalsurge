@@ -1,44 +1,94 @@
 #social-share {
-    transition: $transition;
-    position: fixed;
-    right: $outline-padding - 12px;
-    bottom: $outline-padding + 52px;
-    width: 24px;
     list-style: none;
+    transition: $transition;
     padding: 0;
-
-    li {
-        padding: 11px 0;
-    }
+    position: fixed;
 
     a {
-        display: inline-block;
         text-decoration: none;
+    }
 
-        i {
+    i {
+        transition: $action-transition;
+        font-size: 21px;
+
+        &.icon-share {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    #social-share {
+        left: 30px;
+        top: 33px;
+
+        &.h {
+            opacity: 0;
+            top: -100px;
+        }
+
+        .parent {
+            position: absolute;
+            left: 0px;
+            top: -26px;
+
+            .share-icon.a i {
+                color: #595975;
+            }
+        }
+
+        .child {
+            margin: 7px 0px;
+            height: 24px;
+            opacity: 1;
+            overflow: hidden;
             transition: $action-transition;
-            font-size: 21px;
-        }
+            border-radius: 3px;
+            border: 1px solid transparent;
 
-        &:hover i {
-            color: #595975;
+            &.h {
+                height: 0;
+                opacity: 0;
+            }
         }
     }
+}
 
-    .share {
-        display: block;
-        transform: rotate(270deg);
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        margin: 15px 0px 5px 0;
-        color: #94AAB8;
-        font-size: 14px;
-        line-height: 16px;
-    }
+@media (min-width: $screen-sm-min) {
+    #social-share {
+        right: $outline-padding - 12px;
+        bottom: $outline-padding + 52px;
+        width: 24px;
 
-    &.h {
-        opacity: 0;
-        right: -54px;
+        li {
+            padding: 11px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+
+            &:hover i {
+                color: #595975;
+            }
+        }
+
+        .share {
+            display: block;
+            transform: rotate(270deg);
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            margin: 15px 0px 5px 0;
+            color: #94AAB8;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &.h {
+            opacity: 0;
+            right: -54px;
+        }
     }
 }
