@@ -23,7 +23,7 @@
         }
 
         &.home {
-            font-size: 27px;
+            font-size: 24px;
 
             &:hover span {
                 color: #595975;
@@ -55,6 +55,7 @@
             &.h {
                 width: 0;
                 padding: 0;
+                overflow: hidden;
             }
 
             &.b {
@@ -71,12 +72,12 @@
 
 @media (min-width: $screen-sm-min) {
     #corner-t-r {
-        right: $outline-padding - 13px;
-        top: $outline-padding - 18px;
+        right: $outline-padding - 14px;
+        top: $outline-padding - 26px;
 
         a.download {
             font-size: 14px;
-            margin: -6px 13px 0 0;
+            margin: 0 13px 0 0;
             padding: 15px 21px;
 
             &.h {
