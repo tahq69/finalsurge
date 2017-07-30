@@ -136,13 +136,7 @@
             .top-part {
                 position: relative;
                 transition: $transition;
-                opacity: 1;
-                top: 0;
-
-                &.h {
-                    top: -200px;
-                    opacity: 0;
-                }
+                overflow: hidden;
             }
 
             .bottom-part {

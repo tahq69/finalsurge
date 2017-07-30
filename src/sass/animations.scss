@@ -1,0 +1,19 @@
+.h {
+    .move-up-wrap .move-up {
+        top: 300px;
+    }
+}
+
+.move-up-wrap {
+    position: relative;
+    overflow: hidden;
+
+    .move-up {
+        transition: $transition;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
