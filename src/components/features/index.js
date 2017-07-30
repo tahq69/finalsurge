@@ -8,7 +8,7 @@ export default new Vue({
 
   data: {
     isExiting: true,
-    currentFeature: 1,
+    currentFeature: 0,
     isModalOpen: false
   },
 
@@ -17,7 +17,12 @@ export default new Vue({
       if (this.currentFeature == feature)
         return ['active', 'feature']
 
-      return ['feature', feature < this.currentFeature ? 'left' : 'right']
+      return [
+        'h',
+        'feature',
+        feature < this.currentFeature ? 'left' : 'right',
+        this.isModalOpen ? '' : 'm'
+      ]
     },
 
     activeClass(feature) {
@@ -52,15 +57,22 @@ export default new Vue({
       this.currentFeature = this.currentFeature > 5 ? 1 : this.currentFeature + 1
     },
 
-    beforeEnter() { },
+    beforeEnter() {
+      this.currentFeature = 0
+    },
 
     onEnter() {
       this.isExiting = false
+      this.currentFeature = 1
       corner.black()
     },
 
     beforeLeave() {
       this.isExiting = true
+    },
+
+    afterLeave() {
+      this.currentFeature = 0
     },
   }
 })

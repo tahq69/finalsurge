@@ -3,19 +3,11 @@
         .page-left {
             margin-top: 10000px;
 
-            &.h {
+            &.o {
                 display: none;
             }
 
             .feature-list .feature {
-                &.right h3, &.right p {
-                    transform: translateX(500px);
-                }
-
-                &.left h3, &.left p {
-                    transform: translateX(-500px);
-                }
-
                 &.active h3, &.active p {
                     opacity: 1;
                 }
@@ -44,7 +36,7 @@
                     color: #FFFFFF;
                     position: absolute;
                     right: 20px;
-                    bottom: 20px;
+                    bottom: 0;
                     left: 20px;
                     opacity: 0;
                     z-index: 120;
@@ -53,12 +45,11 @@
         }
 
         .page-right .feature {
-            transition: $action-transition;
+            transition: $transition;
             position: absolute;
             top: 74px;
             left: 66px;
             right: 66px;
-            opacity: 0;
             z-index: 100;
 
             img {
@@ -66,16 +57,12 @@
                 box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.05);
             }
 
-            &.right {
-                transform: translateX(500px);
-            }
+            &.h {
+                transform: translateY(800px);
 
-            &.left {
-                transform: translateX(-500px);
-            }
-
-            &.active {
-                opacity: 1;
+                &.m {
+                    transform: translateY(0);
+                }
             }
         }
 
@@ -146,9 +133,7 @@
         }
 
         .mobile-content {
-            margin-left: 35px;
-            margin-top: 80px;
-            width: 200px;
+            margin: 80px 130px 0 35px;
 
             h3 {
                 font-size: 20px;
@@ -197,7 +182,8 @@
             height: 433px;
             box-shadow: 0 2px 59px 0 rgba(83, 90, 95, 0.22);
 
-            .feature.active {
+            .feature {
+                transition: none;
                 position: relative;
                 top: 0;
                 right: 0;
@@ -226,8 +212,17 @@ $screens-width: 340px;
             top: 140px;
 
             .feature-btns {
+                transition: $transition;
+                position: relative;
+                top: 0;
                 padding: 0;
                 list-style: none;
+                opacity: 1;
+
+                &.h {
+                    top: -100px;
+                    opacity: 0;
+                }
 
                 .feature {
                     float: left;
@@ -258,23 +253,7 @@ $screens-width: 340px;
                 position: relative;
 
                 .feature {
-                    transition: $action-transition;
                     position: absolute;
-                    width: $feature-width;
-                    left: 0;
-                    opacity: 0;
-
-                    &.right {
-                        left: $feature-width * 3;
-                    }
-
-                    &.left {
-                        left: -$feature-width * 3;
-                    }
-
-                    &.active {
-                        opacity: 1;
-                    }
                 }
 
                 h3 {
@@ -311,21 +290,14 @@ $screens-width: 340px;
                 }
 
                 .feature {
-                    transition: $action-transition;
+                    transition: $transition;
                     position: absolute;
+                    top: 0;
                     left: 0;
-                    opacity: 0;
+                    bottom: 0;
 
-                    &.right {
-                        left: $screens-width * 3;
-                    }
-
-                    &.left {
-                        left: -$screens-width * 3;
-                    }
-
-                    &.active {
-                        opacity: 1;
+                    &.h {
+                        top: 1600px;
                     }
                 }
             }
@@ -334,14 +306,21 @@ $screens-width: 340px;
         .compatibilities {
             display: block;
             z-index: 2;
+            transition: $transition;
             width: $feature-width;
             position: absolute;
             left: calc(50% - 490px);
             bottom: 100px;
             font-size: 32px;
+            opacity: 1;
 
             .icon-strava {
                 margin-right: 38px;
+            }
+
+            &.h {
+                opacity: 0;
+                bottom: -100px;
             }
         }
 
