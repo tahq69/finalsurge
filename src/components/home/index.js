@@ -37,11 +37,11 @@ export default new Vue({
       logo.maximize()
       outlines.solid('left', 'top')
       outlines.expand('bottom', 'right')
+      outlines.setPageOne()
     },
 
     onEnter() {
       this.isExiting = false;
-      outlines.setPageOne()
       share.show()
       scroll.show()
       corner.show()

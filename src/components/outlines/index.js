@@ -14,26 +14,41 @@ export default new Vue({
     expand(...sides) {
       this.setAll(sides, false)
     },
+
     solid(...sides) {
       this.setAll(sides, true)
     },
+
     setAll(sides, value) {
       for (let side of sides) {
         this[`is${this.capitalize(side)}Solid`] = value
       }
     },
+
     capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     },
+
     setPageOne() {
       this.isFirstPage = true
     },
+
     setOtherPage() {
       this.isFirstPage = false
     },
+
+    setVidePage() {
+      this.isVideoPage = true
+    },
+
+    leaveVidePage() {
+      this.isVideoPage = false
+    },
+
     expandBottomExtra() {
       this.isExtraExpanded = true
     },
+
     removeBottomExtra() {
       this.isExtraExpanded = false
     }

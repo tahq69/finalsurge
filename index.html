@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <div id="line-r">
+    <div id="line-r" :class="{v: isVideoPage}">
       <div class="line-r-t oh">
         <div class="line"></div>
       </div>
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div id="line-b">
+    <div id="line-b" :class="{v: isVideoPage}">
       <div class="line-b-l oh" :class="{f: isBottomSolid, e: isExtraExpanded}">
         <div class="line"></div>
       </div>
@@ -147,7 +147,7 @@
               </p>
             </div>
             <div class="bottom-part" :class="{h: isExiting}">
-              <a href="#" class="store-link icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></a>
+              <a href="#"  class="store-link icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></a>
               <a href="#" class="store-link icon-android hidden-xs"><span class="path1"></span><span class="path2"></span><span class="path3"></span></a>
             </div>
           </div>
@@ -171,14 +171,15 @@
           <h2 class="page-title">Train on the go <i class="underline"></i></h2>
           <div class="video-wrap">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+              <iframe id="video-frame" src="https://player.vimeo.com/video/48804680?api=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <img id="video-frame-overlay" alt="Play" src="/dist/video-bg@0,5x.png" @click.prevent="playVideo">
             </div>
           </div>
           <div class="video-share">
             <p class="share-title">Share the video</p>
-            <a href="#" class="share-btn"><span class="icon-twitter"></span></a>
-            <a href="#" class="share-btn"><span class="icon-facebook"></span></a>
-            <a href="#" class="share-btn"><span class="icon-linkedin"></span></a>
+            <a href="#" @click.prevent="twitter" class="share-btn"><span class="icon-twitter"></span></a>
+            <a href="#" @click.prevent="facebook" class="share-btn"><span class="icon-facebook"></span></a>
+            <a href="#" @click.prevent="linkedin" class="share-btn"><span class="icon-linkedin"></span></a>
           </div>
         </div>
         <div class="bg" :class="{l: isExiting}"></div>
@@ -342,7 +343,16 @@
     </div>
   </div>
 
+  <script>
+    window.app = {
+      url: encodeURIComponent('http://finalsurge.crip.lv'),
+      videoUrl: encodeURIComponent('https://player.vimeo.com/video/48804680'),
+      text: encodeURIComponent('Training and coaching platform '),
+      summary: encodeURIComponent('Empowering athletes and coaches to reach fitness and performance excellence like never before.')
+    }
+  </script>
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
   <script src="/dist/build.js"></script>
 </body>
 

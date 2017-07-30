@@ -16,15 +16,18 @@
         }
 
         .share-btn {
+            width: 47px;
+            height: 47px;
             display: inline-block;
             border: 1px solid #FFFFFF;
-            border-radius: 30px;
+            border-radius: 61px;
             font-size: 14px;
             text-decoration: none;
-            padding: 14px;
             margin: 0 14px;
 
             [class^="icon-"], [class*=" icon-"] {
+                display: inline-block;
+                padding: 15px 0 0 0;
                 color: #FFFFFF;
             }
         }
@@ -46,6 +49,17 @@
             left: 100%;*/
         }
     }
+
+    #video-frame {
+        z-index: 1;
+    }
+
+    #video-frame-overlay {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        cursor: pointer;
+    }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -60,9 +74,20 @@
             }
 
             .share-btn {
+                width: 61px;
+                height: 61px;
                 border-width: 2px;
                 font-size: 16px;
-                padding: 19px;
+
+                [class^="icon-"], [class*=" icon-"] {
+                    padding: 22.5px 0 0 0;
+                    vertical-align: top;
+                }
+
+                .icon-linkedin, .icon-facebook {
+                    vertical-align: top;
+                    padding: 21.5px 0 0 0;
+                }
             }
         }
 
