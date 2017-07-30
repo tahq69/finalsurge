@@ -1,11 +1,11 @@
 #video {
     .video-wrap {
-        margin: 70px 28px 0 28px;
+        margin: 50px 28px 0 28px;
     }
 
     .video-share {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 30px;
 
         .share-title {
             font-size: 15px;
@@ -43,11 +43,6 @@
         background: url("../assets/track.png") no-repeat;
         background-position: right bottom;
         background-size: auto 100%;
-
-        &.l {
-            /*top: 100%;
-            left: 100%;*/
-        }
     }
 
     #video-frame {
@@ -60,6 +55,22 @@
         z-index: 2;
         cursor: pointer;
     }
+
+    .bg-overlay {
+        transition: $transition;
+        background: white;
+        position: absolute;
+        top: -220%;
+        left: -240%;
+        width: 400%;
+        height: 400%;
+        transform: skewX(-59.8deg);
+
+        &.l {
+            top: -150%;
+            left: -150%;
+        }
+    }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -69,6 +80,8 @@
         }
 
         .video-share {
+            margin-top: 50px;
+
             .share-title {
                 font-size: 22px;
             }
@@ -94,16 +107,17 @@
         .bg {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("../assets/track.png") no-repeat;
-            background-position: right bottom;
-            background-size: auto 100%;
+        }
+
+        .bg-overlay {
+            top: -250%;
+            left: -240%;
+            width: 400%;
+            height: 400%;
 
             &.l {
-                /*top: 100%;
-                left: 100%;*/
+                top: -190%;
+                left: -190%;
             }
         }
     }

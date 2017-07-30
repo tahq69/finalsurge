@@ -182,7 +182,9 @@
             <a href="#" @click.prevent="linkedin" class="share-btn"><span class="icon-linkedin"></span></a>
           </div>
         </div>
-        <div class="bg" :class="{l: isExiting}"></div>
+        <div class="bg">
+          <div class="bg-overlay" :class="{l: isExiting}"></div>
+        </div>
       </div>
       <!-- /.section -->
 

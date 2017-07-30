@@ -8,6 +8,7 @@ export default new Vue({
       isBottomSolid: false,
       isFirstPage: true,
       isExtraExpanded: false,
+      isVideoPage: false,
     }
   },
   methods: {
@@ -37,11 +38,11 @@ export default new Vue({
       this.isFirstPage = false
     },
 
-    setVidePage() {
+    setVideoPage() {
       this.isVideoPage = true
     },
 
-    leaveVidePage() {
+    leaveVideoPage() {
       this.isVideoPage = false
     },
 

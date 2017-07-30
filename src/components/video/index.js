@@ -20,7 +20,7 @@ export default new Vue({
 
   methods: {
     beforeEnter() {
-      outlines.setVidePage()
+      outlines.setVideoPage()
     },
 
     onEnter() {
@@ -31,7 +31,10 @@ export default new Vue({
 
     beforeLeave() {
       this.isExiting = true
-      outlines.leaveVidePage()
+    },
+
+    afterLeave() {
+      outlines.leaveVideoPage()
     },
 
     playVideo() {
