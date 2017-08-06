@@ -11,6 +11,7 @@
     .content-title {
         font-size: 36px;
         font-weight: bold;
+        margin-bottom: 12px;
 
         small {
             font-size: 10px;
@@ -23,12 +24,20 @@
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
         font-weight: 300;
-        margin: 0 20px 32px 20px;
+        margin: 0 20px 22px 20px;
+    }
+
+    .footer-icon {
+        display: block;
+
+        a {
+            text-decoration: none;
+        }
     }
 
     .page-footer {
         position: absolute;
-        bottom: 30px;
+        bottom: 20px;
         left: 0;
         right: 0;
 
@@ -47,6 +56,7 @@
     #achievement {
         .content-title {
             font-size: 90px;
+            margin-bottom: 17px;
 
             small {
                 font-size: 12px;

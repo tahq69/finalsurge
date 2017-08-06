@@ -55,6 +55,7 @@
 
         li.coach {
             list-style: none;
+            z-index: 9;
         }
 
         .coach-thumbnails {
@@ -162,7 +163,8 @@
                 margin: 0;
             }
 
-            h4 {
+            h4, a {
+                text-decoration: none;
                 color: #94AAB8;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
@@ -188,6 +190,10 @@
                 transform: translateX(-135px);
                 transition: $transition;
                 z-index: 0;
+            }
+
+            .active, .active .move-up-wrap {
+                z-index: 10;
             }
 
             .h .move-up-wrap .move-up {
@@ -233,7 +239,7 @@
             }
 
             p {
-                font-size: 64px;
+                font-size: 16px;
             }
         }
     }

@@ -172,7 +172,8 @@
           <div class="video-wrap">
             <div class="embed-responsive embed-responsive-16by9">
               <iframe id="video-frame" src="https://player.vimeo.com/video/48804680?api=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-              <img id="video-frame-overlay" alt="Play" src="/dist/video-bg@0,5x.png" @click.prevent="playVideo">
+              <img id="video-frame-overlay" alt="Play" src="/dist/video-bg@0,5x.png" @click.prevent="playVideo"
+                  title="Click to view video">
             </div>
           </div>
           <div class="video-share">
@@ -291,26 +292,46 @@
             <a class="arrow left" href="#" :class="{h: isExiting}" @click.prevent="prew"><span class="icon-arrow-left"></span></a>
             <a class="arrow right" href="#" :class="{h: isExiting}" @click.prevent="next"><span class="icon-arrow-right"></span></a>
             <ul class="coach-thumbnails" :class="{h: isExiting}">
-              <li :class="coach1"><a href="#" @click.prevent="active(1)"><img src="/dist/coach/ben-rosario@0,5x.png" alt="Ben Rosario"></a></li>
-              <li :class="coach2"><a href="#" @click.prevent="active(2)"><img src="/dist/coach/colin-cook@0,5x.png" alt="Colin Cook"></a></li>
-              <li :class="coach3"><a href="#" @click.prevent="active(3)"><img src="/dist/coach/mark-sortino@0,5x.png" alt="Mark Sortino"></a></li>
-              <li :class="coach4"><a href="#" @click.prevent="active(4)"><img src="/dist/coach/grag-mcmilan@0,5x.png" alt="Grag McMilan"></a></li>
-              <li :class="coach5"><a href="#" @click.prevent="active(5)"><img src="/dist/coach/matt-fitzgerald@0,5x.png" alt="Matt Fitzgerald"></a></li>
+              <li :class="coach1">
+                <a href="#" @click.prevent="active(1)">
+                  <img src="/dist/coach/ben-rosario@0,5x.png" alt="Ben Rosario" title="Ben Rosario">
+                </a>
+              </li>
+              <li :class="coach2">
+                <a href="#" @click.prevent="active(2)">
+                  <img src="/dist/coach/colin-cook@0,5x.png" alt="Colin Cook" title="Colin Cook">
+                </a>
+              </li>
+              <li :class="coach3">
+                <a href="#" @click.prevent="active(3)">
+                  <img src="/dist/coach/mark-sortino@0,5x.png" alt="Mark Sortino" title="Mark Sortino">
+                </a>
+              </li>
+              <li :class="coach4">
+                <a href="#" @click.prevent="active(4)">
+                  <img src="/dist/coach/grag-mcmilan@0,5x.png" alt="Grag McMilan" title="Grag McMilan">
+                </a>
+              </li>
+              <li :class="coach5">
+                <a href="#" @click.prevent="active(5)">
+                  <img src="/dist/coach/matt-fitzgerald@0,5x.png" alt="Matt Fitzgerald" title="Matt Fitzgerald">
+                </a>
+              </li>
             </ul>
             <ul class="coach-testimonials" :class="{h: isExiting}">
               <li :class="coach1">
                 <h3 class="move-up-wrap"><span class="move-up">Ben Rosario</span></h3>
-                <h4 class="move-up-wrap"><span class="move-up">NAZElite.com</span></h4>
+                <h4 class="move-up-wrap"><a class="move-up" href="https://www.nazelite.com/" target="_blank">NAZElite.com</a></h4>
                 <p class="move-up-wrap"><span class="move-up">"Phenomenal system and the new app is now the one to beat."</span></p>
               </li>
               <li :class="coach2">
                 <h3 class="move-up-wrap"><span class="move-up">Colin Cook</span></h3>
-                <h4 class="move-up-wrap"><span class="move-up">PeakTriCoachng.com</span></h4>
+                <h4 class="move-up-wrap"><a class="move-up" href="http://peaktricoaching.com/" target="_blank">PeakTriCoachng.com</a></h4>
                 <p class="move-up-wrap"><span class="move-up">"A better choice and the new app is a game changer."</span></p>
               </li>
               <li :class="coach3">
                 <h3 class="move-up-wrap"><span class="move-up">Mark Sortino</span></h3>
-                <h4 class="move-up-wrap"><span class="move-up">CEO, TeamMPI.com</span></h4>
+                <h4 class="move-up-wrap"><a class="move-up" href="http://www.teammpi.com/" target="_blank">CEO, TeamMPI.com</a></h4>
                 <p class="move-up-wrap"><span class="move-up">Final Surge is our coaching software of choice. It’s easy to
                    use, allows free flow of communication between
                   athlete and coach, has superior customer support and just simply works every time! Their new mobile app
@@ -318,12 +339,12 @@
               </li>
               <li :class="coach4">
                 <h3 class="move-up-wrap"><span class="move-up">Greg Mcmillan</span></h3>
-                <h4 class="move-up-wrap"><span class="move-up">McMillanRunning.com</span></h4>
+                <h4 class="move-up-wrap"><a class="move-up" href="https://www.mcmillanrunning.com/" target="_blank">McMillanRunning.com</a></h4>
                 <p class="move-up-wrap"><span class="move-up">"Terrific platform, terrific new mobile app."</span></p>
               </li>
               <li :class="coach5">
                 <h3 class="move-up-wrap"><span class="move-up">Matt Fitzgerald</span></h3>
-                <h4 class="move-up-wrap"><span class="move-up">MatFitzgerald.org</span></h4>
+                <h4 class="move-up-wrap"><a class="move-up" href="http://mattfitzgerald.org/" target="_blank">MatFitzgerald.org</a></h4>
                 <p class="move-up-wrap"><span class="move-up">"Best training log, and now the best mobile app."</span></p>
               </li>
             </ul>
@@ -333,13 +354,18 @@
       <!-- /.section -->
 
       <div class="section" id="achievement">
-        <div class="ds-section">
+        <div class="ds-section" :class="{h: isExiting}">
           <h2 class="page-title lite">Achivement <i class="underline"></i></h2>
-          <h3 class="content-title">TRAIN WITH A PURPOSE <small>TM</small></h3>
-          <p class="page-content">Whether you are the coach, athlete, team or club training for a first 5K, a marathon, 
-            or an ultra triathlon, Final Surge provides the structure, accountability, and support to achieve fitness 
-            and performance excellence like never before.</p>
-          <span class="icon-appstore"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+          <h3 class="content-title move-up-wrap">
+            <span class="move-up">TRAIN WITH A PURPOSE <small>TM</small></span>
+          </h3>
+          <p class="page-content move-up-wrap"><span class="move-up">
+            Whether you are the coach, athlete, team or club training for a first 5K, a marathon, 
+            or an ultra triathlon, Final Surge provides the structure, accountability, and 
+            support to achieve fitness and performance excellence like never before.</span></p>
+          <span class="move-up-wrap footer-icon">
+            <a class="icon-appstore move-up" href="#"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></a>
+          </span>
           <footer class="page-footer">
             <a href="#" class="footer-link">HELP CENTER</a>
             <a href="#" class="footer-link">LICENCE</a>
