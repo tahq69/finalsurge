@@ -24,17 +24,18 @@ export default new Vue({
       if (this.activeCoach === coach)
         result.push('active')
       else
-        result.push('blur')
-      
-      if(this.activeCoach > coach) {
-        result.push(`size-less`)
-      }
+        result.push('blur h')
 
-      for (let i of [1, 2, 3, 4]) {
-        if ([coach + i, coach - i].indexOf(this.activeCoach) > -1) {
-          result.push(`size-${i}`)
-        }
+      let diff = 3 - this.activeCoach
+      let pos = coach + diff
+
+      if (this.activeCoach === 3) result.push(`pos-${coach}`)
+      else {
+        if (pos < 1) pos += 5
+        if (pos > 5) pos -= 5
+        result.push(`pos-${pos}`)
       }
+      result.push(`size-${Math.abs(3 - pos)}`)
 
       return result
     },

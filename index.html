@@ -286,44 +286,45 @@
       <div class="section" id="testimonials">
         <div class="ds-section">
           <h2 class="page-title">Testimonals <i class="underline"></i></h2>
-          <h3 class="content-title">Top Coaches use Final Surge</h3>
+          <h3 class="content-title" :class="{h: isExiting}">Top Coaches use Final Surge</h3>
           <div class="coach-list">
-            <a class="arrow left" href="#" @click.prevent="prew"><span class="icon-arrow-left"></span></a>
-            <a class="arrow right" href="#" @click.prevent="next"><span class="icon-arrow-right"></span></a>
-            <ul class="coach-thumbnails">
-              <li :class="coach1"><a href="#" @click.prevent="active(1)"><img src="/dist/coach/ben-rosario.png" alt="Ben Rosario"></a></li>
-              <li :class="coach2"><a href="#" @click.prevent="active(2)"><img src="/dist/coach/colin-cook.png" alt="Colin Cook"></a></li>
-              <li :class="coach3"><a href="#" @click.prevent="active(3)"><img src="/dist/coach/mark-sortino.png" alt="Mark Sortino"></a></li>
-              <li :class="coach4"><a href="#" @click.prevent="active(4)"><img src="/dist/coach/grag-mcmilan.png" alt="Grag McMilan"></a></li>
-              <li :class="coach5"><a href="#" @click.prevent="active(5)"><img src="/dist/coach/matt-fitzgerald.png" alt="Matt Fitzgerald"></a></li>
+            <a class="arrow left" href="#" :class="{h: isExiting}" @click.prevent="prew"><span class="icon-arrow-left"></span></a>
+            <a class="arrow right" href="#" :class="{h: isExiting}" @click.prevent="next"><span class="icon-arrow-right"></span></a>
+            <ul class="coach-thumbnails" :class="{h: isExiting}">
+              <li :class="coach1"><a href="#" @click.prevent="active(1)"><img src="/dist/coach/ben-rosario@0,5x.png" alt="Ben Rosario"></a></li>
+              <li :class="coach2"><a href="#" @click.prevent="active(2)"><img src="/dist/coach/colin-cook@0,5x.png" alt="Colin Cook"></a></li>
+              <li :class="coach3"><a href="#" @click.prevent="active(3)"><img src="/dist/coach/mark-sortino@0,5x.png" alt="Mark Sortino"></a></li>
+              <li :class="coach4"><a href="#" @click.prevent="active(4)"><img src="/dist/coach/grag-mcmilan@0,5x.png" alt="Grag McMilan"></a></li>
+              <li :class="coach5"><a href="#" @click.prevent="active(5)"><img src="/dist/coach/matt-fitzgerald@0,5x.png" alt="Matt Fitzgerald"></a></li>
             </ul>
-            <ul class="coach-testimonials">
+            <ul class="coach-testimonials" :class="{h: isExiting}">
               <li :class="coach1">
-                <h3>Ben Rosario</h3>
-                <h4>NAZElite.com</h4>
-                <p>"Phenomenal system and the new app is now the one to beat."</p>
+                <h3 class="move-up-wrap"><span class="move-up">Ben Rosario</span></h3>
+                <h4 class="move-up-wrap"><span class="move-up">NAZElite.com</span></h4>
+                <p class="move-up-wrap"><span class="move-up">"Phenomenal system and the new app is now the one to beat."</span></p>
               </li>
               <li :class="coach2">
-                <h3>Colin Cook</h3>
-                <h4>PeakTriCoachng.com</h4>
-                <p>"A better choice and the new app is a game changer."</p>
+                <h3 class="move-up-wrap"><span class="move-up">Colin Cook</span></h3>
+                <h4 class="move-up-wrap"><span class="move-up">PeakTriCoachng.com</span></h4>
+                <p class="move-up-wrap"><span class="move-up">"A better choice and the new app is a game changer."</span></p>
               </li>
               <li :class="coach3">
-                <h3>Mark Sortino</h3>
-                <h4>CEO, TeamMPI.com</h4>
-                <p>Final Surge is our coaching software of choice. It’s easy to use, allows free flow of communication between
+                <h3 class="move-up-wrap"><span class="move-up">Mark Sortino</span></h3>
+                <h4 class="move-up-wrap"><span class="move-up">CEO, TeamMPI.com</span></h4>
+                <p class="move-up-wrap"><span class="move-up">Final Surge is our coaching software of choice. It’s easy to
+                   use, allows free flow of communication between
                   athlete and coach, has superior customer support and just simply works every time! Their new mobile app
-                  is second to none.</p>
+                  is second to none.</span></p>
               </li>
               <li :class="coach4">
-                <h3>Greg Mcmillan</h3>
-                <h4>McMillanRunning.com</h4>
-                <p>"Terrific platform, terrific new mobile app."</p>
+                <h3 class="move-up-wrap"><span class="move-up">Greg Mcmillan</span></h3>
+                <h4 class="move-up-wrap"><span class="move-up">McMillanRunning.com</span></h4>
+                <p class="move-up-wrap"><span class="move-up">"Terrific platform, terrific new mobile app."</span></p>
               </li>
               <li :class="coach5">
-                <h3>Matt Fitzgerald</h3>
-                <h4>MatFitzgerald.org</h4>
-                <p>"Best training log, and now the best mobile app."</p>
+                <h3 class="move-up-wrap"><span class="move-up">Matt Fitzgerald</span></h3>
+                <h4 class="move-up-wrap"><span class="move-up">MatFitzgerald.org</span></h4>
+                <p class="move-up-wrap"><span class="move-up">"Best training log, and now the best mobile app."</span></p>
               </li>
             </ul>
           </div>

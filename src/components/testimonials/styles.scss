@@ -1,10 +1,19 @@
 #testimonials {
     .content-title {
         text-align: center;
+        transition: $transition;
+        position: relative;
         font-size: 20px;
         color: #6F6F84;
         font-weight: 300;
         margin: 50px 0 42px 0;
+        opacity: 1;
+        top: 0;
+
+        &.h {
+            top: -300px;
+            opacity: 0;
+        }
     }
 
     .arrow {
@@ -12,7 +21,9 @@
         top: 270px;
         font-size: 38px;
         text-decoration: none;
+        transition: $transition;
         z-index: 10;
+        opacity: 1;
 
         &:hover [class^="icon-"], &:hover [class*=" icon-"] {
             color: #F04444;
@@ -20,30 +31,54 @@
 
         &.left {
             left: 26px;
+
+            &.h {
+                left: -52px;
+                opacity: 0;
+            }
         }
 
         &.right {
             right: 26px;
+
+            &.h {
+                right: -52px;
+                opacity: 0;
+            }
         }
     }
 
     .coach-list {
         $thumb-size: 70px;
 
+        position: relative;
+
         li.coach {
             list-style: none;
         }
 
         .coach-thumbnails {
-            margin: 0 auto;
             padding: 0;
+            position: absolute;
+            height: $thumb-size;
+            width: $thumb-size * 5;
+            left: 50%;
+            transform: translateX(-$thumb-size * 5 / 2);
+            transition: $transition;
             text-align: center;
-            position: relative;
+            opacity: 1;
+            top: 0;
+
+            &.h {
+                top: -300px;
+                opacity: 0;
+            }
 
             .coach {
-                position: relative;
+                top: 0;
+                position: absolute;
                 display: inline-block;
-                margin: 0 -10px;
+                transition: transform $transition-timing-function $transition-speed;
 
                 a {
                     transition: $action-transition;
@@ -66,10 +101,32 @@
             }
 
             .blur img {
-                opacity: .7;
+                filter: blur(1px);
             }
 
-            $sizes: 1, 2, 3, 4;
+            $positions: 3, 1, 4, 2, 5;
+
+            .pos-1 {
+                transform: translateX(-2 * ($thumb-size - 15px));
+            }
+
+            .pos-2 {
+                transform: translateX(-$thumb-size - 5px);
+            }
+
+            .pos-3 {
+                transform: translateX(-($thumb-size / 2));
+            }
+
+            .pos-4 {
+                transform: translateX($thumb-size - 15px - $thumb-size / 2);
+            }
+
+            .pos-5 {
+                transform: translateX(2 * ($thumb-size - 20px) - $thumb-size / 2);
+            }
+
+            $sizes: 1, 2;
 
             @each $size in $sizes {
                 .size-#{$size} {
@@ -79,7 +136,7 @@
                         z-index: 11;
 
                         img {
-                            opacity: .9;
+                            filter: blur(0px);
                         }
                     }
 
@@ -93,6 +150,9 @@
 
         .coach-testimonials {
             position: relative;
+            height: 200px;
+            padding: 0;
+            top: $thumb-size + 20px;
 
             h3 {
                 font-size: 23.5px;
@@ -125,25 +185,12 @@
                 top: 0;
                 left: 50%;
                 transform: translateX(-135px);
-                transition: $action-transition;
-                opacity: 0;
+                transition: $transition;
                 z-index: 0;
             }
 
-            .active {
-                opacity: 1;
-            }
-
-            $sizes: 1, 2, 3, 4;
-
-            @each $size in $sizes {
-                .size-#{$size} {
-                    transform: translateX(414px * $size);
-
-                    &.size-less {
-                        transform: translateX(-(414px * $size));
-                    }
-                }
+            .h .move-up-wrap .move-up {
+                top: 150px;
             }
         }
     }
@@ -169,27 +216,9 @@
             }
         }
 
-        .coach-list {
-            $thumb-size: 78px;
-
-            .coach-testimonials {
-                .coach {
-                    width: 414px;
-                    transform: translateX(-207px);
-                }
-
-                $sizes: 1, 2, 3, 4;
-
-                @each $size in $sizes {
-                    .size-#{$size} {
-                        transform: translateX(414px * $size);
-
-                        &.size-less {
-                            transform: translateX(-(414px * $size));
-                        }
-                    }
-                }
-            }
+        .coach-list .coach-testimonials .coach {
+            width: 414px;
+            transform: translateX(-207px);
         }
     }
 }
